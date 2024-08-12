@@ -8,6 +8,8 @@ This project showcases my personal portfolio, featuring an introduction to who I
 
 https://....com
 
+## Technologies used
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
 ## Development server
