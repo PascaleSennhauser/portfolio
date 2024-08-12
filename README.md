@@ -1,5 +1,13 @@
 # Portfolio
 
+# Description of the project
+
+This project showcases my personal portfolio, featuring an introduction to who I am, my skills and an overview of my latest projects. You can get in touch with me through a contact form. I'm looking forward to reading from you.
+
+# Link to my personal homepage
+
+https://....com
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
 ## Development server
