@@ -10,7 +10,7 @@
   height: 100vh;
   position: absolute;
   top: -200px;
-  margin-right: 1100px;
+  right: 1100px;
 }
 
 .landing-page-container {
@@ -18,7 +18,10 @@
   width: 1440px;
   padding-left: 100px;
   padding-right: 100px;
+  padding-top: 117px;
   box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
 }
 
 @media (max-width: 1440px) {
@@ -27,24 +30,19 @@
   }
 }
 
-.info-container {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  height: 100%;
-  padding-top: 117px;
-  box-sizing: border-box;
+.landing-page-container .profile-picture-container,
+.landing-page-container .right-container {
+  flex: 1;
 }
 
-.info-container .profile-picture {
-  height: 90vh;
+.profile-picture {
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 .right-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   color: #5988FF;
 }
 
@@ -70,7 +68,7 @@
 .greeting :nth-child(2) {
   margin-top: 17px;
   font-family: Baloo;
-  font-size: 128px;
+  font-size: 110px;
   font-weight: 400;
   line-height: 140px;
   letter-spacing: -0.025em;

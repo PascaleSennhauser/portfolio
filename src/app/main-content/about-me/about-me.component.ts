@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-
+  imgSrc1: string = 'assets/img/icons/location-icon-1.png';
+  imgSrc2: string = 'assets/img/icons/location-icon-2.png';
 }
