@@ -1,22 +1,21 @@
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1440px;
   height: 117px;
   padding-left: 100px;
   padding-right: 100px;
   box-sizing: border-box;
 }
 
-@media (max-width: 1440px) {
-  header {
-    width: 100vw;
-  }
-}
-
-img {
-  height: 69px;
+.logo {
+  font-family: 'Amaranth';
+  font-size: 64px;
+  color: white;
 }
 
 .header-menu {
