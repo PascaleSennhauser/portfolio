@@ -249,5 +249,26 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+html {
   scroll-behavior: smooth;
+}
+
+.global-background-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.global-main-container {
+  width: 1440px;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1440px) {
+  .global-main-container {
+    width: 1440px;
+  }
 }

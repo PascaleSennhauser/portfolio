@@ -1,9 +1,6 @@
-.background-container {
+.global-background-container {
     height: 100vh;
-    width: 100vw;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
-    display: flex;
-    justify-content: center;
 
     .circle {
         width: 50%;
@@ -15,17 +12,10 @@
 
 .landing-page-container {
     position: relative;
-    width: 1440px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-bottom: unset;
     padding-top: 117px;
-    box-sizing: border-box;
     display: flex;
     align-items: flex-end;
-
-    @media (max-width: 1440px) {
-        width: 100vw;
-    }
 
     .profile-picture-container,
     .right-container {
