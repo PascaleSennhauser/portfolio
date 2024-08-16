@@ -7,10 +7,10 @@
 }
 
 .background-container .circle {
-  height: 100vh;
+  width: 50%;
   position: absolute;
-  top: -200px;
-  right: 1100px;
+  top: -25%;
+  left: -4%;
 }
 
 .landing-page-container {
@@ -37,17 +37,21 @@
 
 .profile-picture {
   max-width: 100%;
+  max-height: 90vh;
   vertical-align: bottom;
 }
 
 .right-container {
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding-top: 100px;
+  box-sizing: border-box;
   color: #5988FF;
 }
 
 .greeting {
-  padding-top: 60px;
   font-weight: 400;
   line-height: 64px;
   text-align: left;
@@ -70,7 +74,7 @@
   font-family: Baloo;
   font-size: 110px;
   font-weight: 400;
-  line-height: 140px;
+  line-height: 100px;
   letter-spacing: -0.025em;
   text-align: left;
 }
@@ -78,7 +82,9 @@
 .bottom-container {
   display: flex;
   height: 100%;
-  margin-top: 60px;
+  max-height: 500px;
+  padding-top: 50px;
+  box-sizing: border-box;
 }
 
 .scroll-container {
@@ -91,7 +97,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 
 .scroll-container :first-child:hover {

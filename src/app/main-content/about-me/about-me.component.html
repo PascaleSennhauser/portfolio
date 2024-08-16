@@ -10,11 +10,11 @@
                 <span>I am</span>
                 <div class="icon-container">
                     <div class="location-container">
-                        <img class="location-icon" [src]={{}}>
+                        <img class="location-icon" [src]="imgSrcLocation" (mouseover)="imgSrcLocation = 'assets/img/icons/location-icon-2.png'" (mouseout)="imgSrcLocation = 'assets/img/icons/location-icon-1.png'">
                         <span>located in<br>Winterthur</span>
                     </div>
                     <div class="remote-container">
-                        <img class="remote-icon" src="assets/img/icons/remote-icon-1.png">
+                        <img class="remote-icon" [src]="imgSrcRemote" (mouseover)="imgSrcRemote = 'assets/img/icons/remote-icon-2.png'" (mouseout)="imgSrcRemote = 'assets/img/icons/remote-icon-1.png'">
                         <span>open to work<br>remote</span>
                     </div>
                 </div>

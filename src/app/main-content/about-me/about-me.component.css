@@ -46,6 +46,8 @@
 .container-left {
   display: flex;
   flex-direction: column;
+  padding-right: 60px;
+  box-sizing: border-box;
 }
 
 .title {
@@ -76,11 +78,15 @@
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
+  height: 62px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
 }
 
 .i-am-container .icon-container .location-container, .i-am-container .icon-container .remote-container {
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 16px;
 }
 
@@ -89,7 +95,16 @@
   height: 40px;
 }
 
+.i-am-container .icon-container .location-icon:hover {
+  height: unset;
+}
+
 .i-am-container .icon-container .remote-icon {
   width: 53.58px;
   height: 46.99px;
+}
+
+.i-am-container .icon-container .remote-icon:hover {
+  width: 61.71px;
+  height: 54.45px;
 }
