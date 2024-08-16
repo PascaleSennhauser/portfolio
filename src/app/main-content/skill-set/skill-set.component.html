@@ -1,1 +1,15 @@
-<p>skill-set works!</p>
+<div class="global-background-container background-container">
+    <div id="skillSet" class="global-main-container skill-set-container">
+        <h2>Skill set</h2>
+        <div class="skills-container">
+            @for (skill of skills; track skill) {
+                <div class="single-skill-container">
+                    <img src="./../../../assets/img/icons/{{ skill.img }}">
+                    <span>{{ skill.name }}</span>
+                </div>  
+            }
+        </div>
+
+    </div>
+
+</div>

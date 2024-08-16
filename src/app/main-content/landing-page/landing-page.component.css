@@ -87,8 +87,9 @@
   width: 100%;
 }
 
-.scroll-container :first-child:hover {
-  cursor: pointer;
+.scroll-container :first-child a {
+  text-decoration: none;
+  color: #5988FF;
 }
 
 .scroll-container :nth-child(2) {

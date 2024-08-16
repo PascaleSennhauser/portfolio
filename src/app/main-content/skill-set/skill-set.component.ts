@@ -8,5 +8,47 @@ import { Component } from '@angular/core';
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
+  skills: Array<any> = [
+    {
+      name: 'Angular',
+      img: 'Angular.png'
+    },
+    {
+      name: 'TypeScript',
+      img: 'TypeScript.png'
+    },
+    {
+      name: 'JavaScript',
+      img: 'JavaScript.png'
+    },
+    {
+      name: 'HTML',
+      img: 'html.png'
+    },
+    {
+      name: 'Scrum',
+      img: 'Scrum.png'
+    },
+    {
+      name: 'Firebase',
+      img: 'Firebase.png'
+    },
+    {
+      name: 'Git',
+      img: 'Git.png'
+    },
+    {
+      name: 'CSS',
+      img: 'css.png'
+    },
+    {
+      name: 'REST-Api',
+      img: 'Api.png'
+    },
+    {
+      name: 'Material Design',
+      img: 'Material-des.png'
+    }
+  ];
 
 }
