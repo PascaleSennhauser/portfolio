@@ -10,4 +10,6 @@ import { Component } from '@angular/core';
 export class AboutMeComponent {
   imgSrcLocation: string = 'assets/img/icons/location-icon-1.png';
   imgSrcRemote: string = 'assets/img/icons/remote-icon-1.png';
+
+  
 }

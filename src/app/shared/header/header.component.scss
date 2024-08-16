@@ -17,6 +17,7 @@ header {
     font-size: 64px;
     color: white;
     text-decoration: none;
+
     &:hover {
         filter: drop-shadow(2px 2px 4px white);
     }
@@ -24,10 +25,11 @@ header {
 
 .header-menu {
     font-family: Montserrat;
-    width: 418px;
+    width: 600px;
     height: 32px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     a {
         width: 120px;
@@ -45,4 +47,35 @@ header {
             line-height: 27.6px;
         }
     }
+}
+
+.language-container {
+    display: flex;
+    justify-content: center;
+    color: #5988FF;
+    width: 120px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+
+    .separator {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .de,
+    .en {
+        &:hover {
+            cursor: pointer;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 27.6px;
+        }
+    }
+}
+
+.selected {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
 }
