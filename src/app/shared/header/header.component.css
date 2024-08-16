@@ -16,6 +16,11 @@ header {
   font-family: 'Amaranth';
   font-size: 64px;
   color: white;
+  text-decoration: none;
+}
+
+.logo:hover {
+  filter: drop-shadow(2px 2px 4px white);
 }
 
 .header-menu {
