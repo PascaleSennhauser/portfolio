@@ -87,12 +87,13 @@
             }
         }
 
+
         .remote-icon {
             width: 53.58px;
             height: 46.99px;
 
             &:hover {
-                width: 61.71px;
+                width: 63px;
                 height: 54.45px;
             }
         }
@@ -116,4 +117,8 @@
     a {
         @include standard-button(254px, 58px);
     }
+}
+
+.d-none {
+    display: none;
 }
