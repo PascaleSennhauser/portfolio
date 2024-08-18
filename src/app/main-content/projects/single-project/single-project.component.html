@@ -1,7 +1,14 @@
 <a><img src={{project.imgSrc}}></a>
 <div class="project-information-container">
     <h3>{{ project.name }}</h3>
-    <span class="technologies">Hallo</span>
+    <div class="technology-container">
+        @for (technology of project.usedTechnologies; let i = $index; track technology) {
+            <span class="technologies">{{ technology }}</span>
+            @if (i+1 < project.usedTechnologies.length) {
+                <div class="separator"></div>
+            }
+        }
+    </div>
     <p class="description">{{ project.description }}</p>
     <div class="button-container">
         <a href={{project.linkGitHub}} target="_blank">Github</a>

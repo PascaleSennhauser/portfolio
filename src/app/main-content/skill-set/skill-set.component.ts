@@ -26,6 +26,14 @@ export class SkillSetComponent {
       img: 'html.png'
     },
     {
+      name: 'CSS',
+      img: 'css.png'
+    },
+    {
+      name: 'Sass',
+      img: 'sass.png'
+    },
+    {
       name: 'Scrum',
       img: 'Scrum.png'
     },
@@ -38,17 +46,14 @@ export class SkillSetComponent {
       img: 'Git.png'
     },
     {
-      name: 'CSS',
-      img: 'css.png'
-    },
-    {
       name: 'REST-Api',
       img: 'Api.png'
     },
     {
       name: 'Material Design',
       img: 'Material-des.png'
-    }
+    },
+
   ];
 
 }

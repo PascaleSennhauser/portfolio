@@ -23,13 +23,32 @@
         color: #5988FF;
     }
 
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-family: Baloo;
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 45px;
+        color: #5988FF;
+    }
+
     p {
         font-family: Montserrat;
         font-size: 23px;
         font-weight: 400;
         line-height: 27.6px;
         text-align: left;
+    }
 
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }
 

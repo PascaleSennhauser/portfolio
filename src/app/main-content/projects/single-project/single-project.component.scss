@@ -22,14 +22,29 @@ h3 {
     margin: 0;
 }
 
-.technologies {
-    font-family: Montserrat;
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 27.6px;
-    text-align: left;
-    color: #5988FF;
+.technology-container {
+    display: flex;
+    align-items: center;
+
+    .technologies {
+        font-family: Montserrat;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 27.6px;
+        text-align: left;
+        color: #5988FF;
+    }
+
+    div {
+        width: 1px;
+        height: 20px;
+        background-color: #5988FF;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
 }
+
+
 
 .description {
     font-family: Montserrat;

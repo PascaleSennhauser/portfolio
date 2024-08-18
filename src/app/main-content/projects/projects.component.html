@@ -3,7 +3,7 @@
         <h2>My work</h2>
         <p>Explore a selection of my work here. Click on the image of a project to test it live.</p>
         <div class="projects-container">
-            @for (singleProject of projects; let i = $index; track singleProject) {
+            @for (singleProject of projects; track singleProject) {
                 <app-single-project [project]="singleProject"></app-single-project>
                 }
         </div>

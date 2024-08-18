@@ -37,8 +37,8 @@ export class ProjectsComponent {
     },
     {
       name: 'Portfolio',
-      usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Api' ],
-      description: 'Based on the PokéAPI library that provieds and catalogues pokemon information.',
+      usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'SCSS' ],
+      description: 'My portfolio page, to introduce myself and highlight my web programming skills. It\'s the page you\'re looking at right now.',
       imgSrc: 'assets/img/projects/portfolio.png',
       linkGitHub: 'https://github.com/PascaleSennhauser/portfolio.git',
       linkLiveTest: ''
