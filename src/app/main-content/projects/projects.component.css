@@ -26,6 +26,7 @@
   width: 400px;
   margin-top: 330px;
   margin-right: 1200px;
+  rotate: 81deg;
 }
 
 .circle-4 {
@@ -33,6 +34,7 @@
   width: 500px;
   margin-top: 650px;
   margin-left: 1000px;
+  rotate: 81deg;
 }
 
 .circle-5 {
@@ -40,6 +42,7 @@
   width: 50px;
   margin-top: 990px;
   margin-right: 800px;
+  rotate: 81deg;
 }
 
 .circle-6 {

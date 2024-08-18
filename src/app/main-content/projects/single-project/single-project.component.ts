@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../../../interfaces/project.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-single-project',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule ],
   templateUrl: './single-project.component.html',
   styleUrl: './single-project.component.scss'
 })
@@ -17,4 +18,7 @@ export class SingleProjectComponent {
     linkGitHub: 'https://github.com/PascaleSennhauser/join.git',
     linkLiveTest: ''
   };
+
+  @Input() index: number = 0;
+
 }
