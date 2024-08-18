@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class SingleProjectComponent {
   @Input() project: Project = {
     name: 'Join',
+    folderPath: '../../join/index.html',
     usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase' ],
     description: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
     imgSrc: 'assets/img/projects/join.png',
