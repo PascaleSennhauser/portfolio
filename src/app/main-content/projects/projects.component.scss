@@ -1,3 +1,7 @@
+.background-container {
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+}
+
 .projects-circle-container {
     position: relative;
 }
@@ -18,6 +22,7 @@
 
 .circle-3 {
     position: absolute;
+    display: block;
     width: 400px;
     margin-top: 330px;
     margin-right: 1200px;
@@ -37,18 +42,18 @@
     margin-right: 800px;
 }
 
-.circle-7 {
-    position: absolute;
-    width: 200px;
-    margin-top: 1200px;
-    margin-right: 600px;
-}
-
 .circle-6 {
     position: absolute;
     width: 100px;
     margin-top: 1500px;
     margin-left: 1200px;
+}
+
+.circle-7 {
+    position: absolute;
+    width: 200px;
+    margin-top: 1200px;
+    margin-right: 600px;
 }
 
 h2 {

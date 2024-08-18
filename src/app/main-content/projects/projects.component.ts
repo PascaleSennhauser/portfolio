@@ -30,7 +30,7 @@ export class ProjectsComponent {
     {
       name: 'Pokédex',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS', 'Api' ],
-      description: 'Based on the PokéAPI library that provieds and catalogues pokemon information.',
+      description: 'Based on the PokéAPI library that provieds and catalogues pokémon information.',
       imgSrc: 'assets/img/projects/pokédex.png',
       linkGitHub: 'https://github.com/PascaleSennhauser/Pokedex.git',
       linkLiveTest: ''

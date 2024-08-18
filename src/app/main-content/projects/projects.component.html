@@ -1,4 +1,4 @@
-<div class="global-background-container">
+<div class="global-background-container background-container">
     <img class="circle-1" src="assets/img/background/ellipse.svg">
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <img class="circle-3" src="assets/img/background/ellipse.svg">
@@ -6,11 +6,11 @@
     <img class="circle-5" src="assets/img/background/ellipse.svg">
     <img class="circle-6" src="assets/img/background/ellipse.svg">
     <img class="circle-7" src="assets/img/background/ellipse.svg">
-    <div class="global-main-container projects-circle-container">
+    <div class="global-main-container projects-circle-container" id="myWork">
         <h2>My work</h2>
         <p>Explore a selection of my work here. Click on the image of a project to test it live.</p>
         <div class="projects-container">
-            @for (singleProject of projects; track singleProject) {
+            @for (singleProject of projects; let i = $index; track singleProject) {
                 <app-single-project [project]="singleProject"></app-single-project>
                 }
         </div>
