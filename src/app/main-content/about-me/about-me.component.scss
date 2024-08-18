@@ -1,5 +1,9 @@
 @import './../../../styles.scss';
 
+.background-container {
+    position: relative;
+}
+
 .circle-1 {
     position: absolute;
     width: 206px;
@@ -19,7 +23,6 @@
 }
 
 .about-me-container {
-    position: relative;
     display: flex;
     align-items: center;
     color: #5988FF;

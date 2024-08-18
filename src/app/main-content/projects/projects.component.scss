@@ -1,8 +1,5 @@
 .background-container {
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
-}
-
-.projects-circle-container {
     position: relative;
 }
 
@@ -22,7 +19,6 @@
 
 .circle-3 {
     position: absolute;
-    display: block;
     width: 400px;
     margin-top: 330px;
     margin-right: 1200px;
@@ -31,6 +27,7 @@
 
 .circle-4 {
     position: absolute;
+    display: block;
     width: 500px;
     margin-top: 650px;
     margin-left: 1000px;

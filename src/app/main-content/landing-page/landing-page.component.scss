@@ -2,21 +2,23 @@
     height: 100vh;
     min-height: 726px;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+    position: relative;
 
     .circle {
         width: 50%;
         position: absolute;
         top: -25%;
         left: -4%;
+        z-index: 1;
     }
 }
 
 .landing-page-container {
-    position: relative;
     padding-bottom: unset;
     padding-top: 117px;
     display: flex;
     align-items: flex-end;
+    z-index: 2;
 
     .profile-picture-container,
     .right-container {
