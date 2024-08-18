@@ -1,16 +1,48 @@
-a, .project-information-container {
+@import './../../../../styles.scss';
+
+a,
+.project-information-container {
     flex: 1;
 }
 
 a {
     display: flex;
     justify-content: center;
-    align-items:end;
+    align-items: end;
     height: 300px;
+}
+
+h3 {
+    font-family: Baloo;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 54px;
+    text-align: left;
+    color: #5988FF;
+    margin: 0;
+}
+
+.technologies {
+    font-family: Montserrat;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+    text-align: left;
+    color: #5988FF;
+}
+
+.description {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    color: black;
 }
 
 img {
     width: 90%;
+    max-width: 410px;
     aspect-ratio: 1340 / 860;
     object-fit: fill;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -31,10 +63,26 @@ img {
     align-items: start;
 }
 
+.button-container {
+    margin-top: 10px;
+    a {
+        @include standard-button(137px, 58px);
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 27.6px;
+        color:#5988FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @keyframes img-hover {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.2);
     }
@@ -44,6 +92,7 @@ img {
     from {
         transform: scale(1.2);
     }
+
     to {
         transform: scale(1);
     }

@@ -116,6 +116,9 @@
     margin-top: 30px;
     a {
         @include standard-button(254px, 58px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
