@@ -72,6 +72,12 @@ header {
   line-height: 27.6px;
 }
 
+.language-bold {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27.6px;
+}
+
 .selected {
   font-size: 23px;
   font-weight: 700;

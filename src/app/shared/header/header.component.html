@@ -5,9 +5,9 @@
             <a href="#skillSet">{{ text[languageData.currentLanguage].skillSet }}</a>
             <a href="#myWork">{{ text[languageData.currentLanguage].myWork }}</a>
             <div class="language-container">
-                <span class="de" (click)="setLanguage('ge')">{{ text[languageData.currentLanguage].german }}</span>
+                <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{ text[languageData.currentLanguage].german }}</span>
                 <span class="separator">|</span>
-                <span class="en" (click)="setLanguage('en')">{{ text[languageData.currentLanguage].english }}</span>
+                <span class="en" [class.language-bold]="languageData.currentLanguage == 'en'" (click)="setLanguage('en')">{{ text[languageData.currentLanguage].english }}</span>
             </div>
         </div>
 </header>
