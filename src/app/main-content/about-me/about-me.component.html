@@ -3,43 +3,34 @@
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <div id="aboutMe" class="global-main-container about-me-container">
         <div class="container-left">
-            <h2 class="title">
-                Let's work<br>together
+            <h2 class="title" [innerHTML]="text[currentLanguage].title">
             </h2>
             <div class="i-am-container">
-                <span>I am</span>
+                <span>{{ text[currentLanguage].Iam }}</span>
                 <div class="icon-container">
                     <div class="location-container">
                         <img class="location-icon" [src]="imgSrcLocation"
                             (mouseover)="imgSrcLocation = 'assets/img/icons/location-icon-2.png'"
                             (mouseout)="imgSrcLocation = 'assets/img/icons/location-icon-1.png'">
                         <img src="assets/img/icons/location-icon-2.png" class="d-none">
-                        <span>located in<br>Winterthur</span>
+                        <span [innerHTML]="text[currentLanguage].located"></span>
                     </div>
                     <div class="remote-container">
                         <img class="remote-icon" [src]="imgSrcRemote"
                             (mouseover)="imgSrcRemote = 'assets/img/icons/remote-icon-2.png'"
                             (mouseout)="imgSrcRemote = 'assets/img/icons/remote-icon-1.png'">
                             <img src="assets/img/icons/remote-icon-2.png" class="d-none">
-                        <span>open to work<br>remote</span>
+                        <span [innerHTML]="text[currentLanguage].remote"></span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-right">
-            <p>I am a frontend developer based in Winterthur, Switzerland near Zurich.
-                I have a passion for coding websites and web based projects.
-                To stay current and continously develop my skills, I dedicate time to self-eductaion.
-                My diverse professional background, including experience as a business administrator, as well as working
-                in the health and social sector, has equipped me with valuable insights and competences.
-                I have developed skills such as quickly learning new things, understanding client needs and remaining flexible - qulities that
-                greatly benefit me as a developer.
-                I also enjoy solving complex problems and working with clients to find the best solutions for their
-                needs.<br><br>
-                If you think I'd be a good fit for your company or projects, contact me!
+            <p>{{ text[currentLanguage].aboutMe }}<br><br>
+                {{ text[currentLanguage].workTogether }}
             </p>
             <div class="button-container">
-                <a href="#contact">Send a message</a>
+                <a href="#contact">{{ text[currentLanguage].button }}</a>
             </div>
         </div>
     </div>

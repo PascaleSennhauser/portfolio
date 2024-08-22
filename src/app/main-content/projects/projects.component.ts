@@ -14,7 +14,7 @@ export class ProjectsComponent {
     {
       name: 'Join',
       folderPath: '../../join/index.html',
-      usedTechnologies: ['JavaScript', 'HTML', 'CSS', 'Firebase' ],
+      usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
       description: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imgSrc: 'assets/img/projects/join.png',
       linkGitHub: 'https://github.com/PascaleSennhauser/join.git',

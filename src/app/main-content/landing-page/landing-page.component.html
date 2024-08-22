@@ -7,8 +7,8 @@
         </div>
         <div class="right-container">
             <div class="greeting">
-                <p>Hello! I am Pascale</p>
-                <h1>FRONTEND<br>DEVELOPER</h1>
+                <p>{{ text[currentLanguage].greeting }}</p>
+                <h1 [innerHTML]="text[currentLanguage].jobTitle"></h1>
             </div>
             <div class="bottom-container">
                 <div class="scroll-container">

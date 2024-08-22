@@ -53,6 +53,10 @@ export class SkillSetComponent {
       name: 'Material Design',
       img: 'Material-des.png'
     },
+    {
+      name: 'SQL',
+      img: 'SQL.png'
+    },
 
   ];
 
