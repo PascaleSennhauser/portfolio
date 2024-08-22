@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { LanguageService } from '../services/language.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-imprint',
@@ -26,4 +27,14 @@ export class ImprintComponent {
       privacyPolicyTitle: "Datenschutzerklärung"
     }
   }
+
+  constructor(private route: ActivatedRoute) {
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      this.languageData.currentLanguage = params['lang'];
+      });
+  }
+
 }

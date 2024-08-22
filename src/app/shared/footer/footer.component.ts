@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -18,5 +19,16 @@ export class FooterComponent {
     ge: {
       imprint: "Impressum"
     }
+  }
+
+  constructor(private router: Router) {
+  }
+
+  goToImprint() {
+    this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
+  }
+
+  goToLandingPage() {
+    this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
   }
 }

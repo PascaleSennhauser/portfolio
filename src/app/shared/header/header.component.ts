@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +30,14 @@ export class HeaderComponent {
     }
   }
 
+  constructor(private router: Router) {
+  }
+
   setLanguage(language: string) {
     this.languageData.setLanguage(language);
+  }
+
+  goToLandingPage() {
+    this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
   }
 }

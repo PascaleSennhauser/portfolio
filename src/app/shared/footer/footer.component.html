@@ -1,7 +1,7 @@
 <footer class="global-background-container background-container">
     <div class="global-main-container footer-container">
         <div class="upper-container">
-            <a href="#landingPage" class="logo">&#60;ps&#62;</a>
+            <a (click)="goToLandingPage()" class="logo">&#60;ps&#62;</a>
             <div class="imprint-container">
                 <span><span class="copyright-sign">©</span>Pascale Sennhauser 2024</span>
             </div>
@@ -11,6 +11,6 @@
                 <a href="#" target="_blank"><img src="assets/img/icons/linkedin-icon-white.png"></a>
             </div>
         </div>
-        <a href="imprint" class="imprint">{{ text[languageData.currentLanguage].imprint }}</a>
+        <a (click)="goToImprint()" class="imprint">{{ text[languageData.currentLanguage].imprint }}</a>
     </div>
 </footer>
