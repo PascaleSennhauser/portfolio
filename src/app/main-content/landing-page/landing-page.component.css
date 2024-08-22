@@ -116,31 +116,13 @@
 }
 
 .icon-container-wrapper .icon-container img {
-  animation: translate-right 200ms linear;
+  transition: all 200ms linear;
   transform: translateX(0px);
   width: 30px;
   height: 30px;
 }
 
 .icon-container-wrapper .icon-container img:hover {
-  animation: translate-left 200ms linear;
+  transition: all 200ms linear;
   transform: translateX(-10px);
-}
-
-@keyframes translate-left {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-10px);
-  }
-}
-
-@keyframes translate-right {
-  from {
-    transform: translateX(-10px);
-  }
-  to {
-    transform: translateX(0px);
-  }
 }

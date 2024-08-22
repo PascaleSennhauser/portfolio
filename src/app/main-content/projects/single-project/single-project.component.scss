@@ -60,12 +60,12 @@ img {
     aspect-ratio: 1340 / 860;
     object-fit: fill;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    animation: img-hover-out 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
     transform: scale(1);
 
     &:hover {
         cursor: pointer;
-        animation: img-hover 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
         transform: scale(1.2);
     }
 }
@@ -87,25 +87,5 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-}
-
-@keyframes img-hover {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes img-hover-out {
-    from {
-        transform: scale(1.2);
-    }
-
-    to {
-        transform: scale(1);
     }
 }
