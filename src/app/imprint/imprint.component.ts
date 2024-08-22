@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-imprint',
@@ -9,5 +10,20 @@ import { HeaderComponent } from '../shared/header/header.component';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
+  languageData = inject(LanguageService);
 
+  text: any = {
+    en: {
+      imprintTitle: "Imprint",
+      imprintCountry: "Switzerland",
+      images: "images",
+      privacyPolicyTitle: "Privacy Policy"
+    },
+    ge: {
+      imprintTitle: "Impressum",
+      imprintCountry: "Schweiz",
+      images: "Bilder",
+      privacyPolicyTitle: "Datenschutzerklärung"
+    }
+  }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-skill-set',
@@ -59,5 +60,15 @@ export class SkillSetComponent {
     },
 
   ];
+  languageData = inject(LanguageService);
+
+  text: any = {
+    en: {
+      title: "Skill set"
+    },
+    ge: {
+      title: "Fähigkeiten"
+    }
+  }
 
 }

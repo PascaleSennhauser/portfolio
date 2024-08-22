@@ -9,7 +9,7 @@
             }
         }
     </div>
-    <p class="description" [ngStyle]="{'text-align': index % 2 == 0 ? 'left' : 'right'}">{{ project.description }}</p>
+    <p class="description" [ngStyle]="{'text-align': index % 2 == 0 ? 'left' : 'right'}">{{ getDescription() }}</p>
     <div class="button-container">
         <a href={{project.linkGitHub}} target="_blank">Github</a>
     </div>

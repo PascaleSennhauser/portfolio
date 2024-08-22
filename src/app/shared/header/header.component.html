@@ -1,13 +1,13 @@
 <header>
         <a href="#landingPage" class="logo">&#60;ps&#62;</a>
         <div class="header-menu">
-            <a href="#aboutMe">{{ text[currentLanguage].aboutMe }}</a>
-            <a href="#skillSet">{{ text[currentLanguage].skillSet }}</a>
-            <a href="#myWork">{{ text[currentLanguage].myWork }}</a>
+            <a href="#aboutMe">{{ text[languageData.currentLanguage].aboutMe }}</a>
+            <a href="#skillSet">{{ text[languageData.currentLanguage].skillSet }}</a>
+            <a href="#myWork">{{ text[languageData.currentLanguage].myWork }}</a>
             <div class="language-container">
-                <span class="de" (click)="setLanguage('ge')">{{ text[currentLanguage].german }}</span>
+                <span class="de" (click)="setLanguage('ge')">{{ text[languageData.currentLanguage].german }}</span>
                 <span class="separator">|</span>
-                <span class="en" (click)="setLanguage('en')">{{ text[currentLanguage].english }}</span>
+                <span class="en" (click)="setLanguage('en')">{{ text[languageData.currentLanguage].english }}</span>
             </div>
         </div>
 </header>

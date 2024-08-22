@@ -3,13 +3,12 @@
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <img class="circle-3" src="assets/img/background/ellipse.svg">
     <div class="global-main-container main-contact-container" id="contact">
-        <h2>Contact</h2>
+        <h2>{{ text[languageData.currentLanguage].title }}</h2>
         <div class="contact-container">
             <div class="description">
-                <h3>Got a problem to solve?</h3>
-                <p class="contact-description">Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                    contributing to your projects with my work.</p>
-                <p class="developer-description">Need a Frontend developer?<b> Contact me!</b></p>
+                <h3>{{ text[languageData.currentLanguage].title }}</h3>
+                <p class="contact-description">{{ text[languageData.currentLanguage].contactDescription}}</p>
+                <p class="developer-description" [innerHTML]="text[languageData.currentLanguage].developerDescription"></p>
             </div>
             <app-contact-form></app-contact-form>
         </div>

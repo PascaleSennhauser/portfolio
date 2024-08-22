@@ -11,14 +11,7 @@ import { LanguageService } from '../../services/language.service';
 })
 export class LandingPageComponent {
   languageData = inject(LanguageService);
-  currentLanguage: any = 'en';
-
-  constructor() {
-    this.languageData.languageSubject.subscribe((language) => {
-      this.currentLanguage = language;
-    })
-  }
-
+  
   text: any = {
     en: {
       greeting: "Hello! I am Pascale",

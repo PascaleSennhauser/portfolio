@@ -11,13 +11,6 @@ import { LanguageService } from '../../services/language.service';
 export class HeaderComponent {
 
   languageData = inject(LanguageService);
-  currentLanguage: any = 'en';
-
-  constructor() {
-    this.languageData.languageSubject.subscribe((language) => {
-      this.currentLanguage = language;
-    })
-  }
 
   text: any = {
     en: {

@@ -12,13 +12,6 @@ export class AboutMeComponent {
   imgSrcLocation: string = 'assets/img/icons/location-icon-1.png';
   imgSrcRemote: string = 'assets/img/icons/remote-icon-1.png';
   languageData = inject(LanguageService);
-  currentLanguage: any = 'en';
-
-  constructor() {
-    this.languageData.languageSubject.subscribe((language) => {
-      this.currentLanguage = language;
-    })
-  }
 
   text: any = {
     en: {
@@ -33,8 +26,8 @@ export class AboutMeComponent {
     ge: {
       title: "Lassen Sie uns gemeinsam<br>arbeiten",
       Iam: "Ich bin",
-      located: "Wohnhaft in<br>Winterthur",
-      remote: "Offen für<br>Remote-Arbeit",
+      located: "wohnhaft in<br>Winterthur",
+      remote: "offen für<br>Remote-Arbeit",
       aboutMe: "Ich bin eine Frontend-Entwicklerin und wohnhaft in Winterthur, Schweiz, in der Nähe von Zürich. Ich habe eine Leidenschaft für die Programmierung von Webseiten und webbasierten Projekten. Um auf dem Laufenden zu bleiben und meine Fähigkeiten kontinuierlich weiterzuentwickeln, investiere ich Zeit, um mich selbst fortzubilden. Durch meine vielseitigen Berufserfahrungen, darunter Erfahurng im Kaufmännsichen Bereich, sowie im Gesundheits- und Sozialwesen, hat mir wertvolle Einblicke und Kompetenzen vermittelt. Ich habe Fähigkeiten entwickelt, wie schnell viel Neues zu lernen, auf Kundenbefürfnisse einzugehen und flexibel zu sein, was mir als Entwicklerin zugute kommt. Ausserdem macht es mir Spass, komplexe Probleme zu lösen und mit Kunden zusammenzuarbeiten, um die besten Lösungen für ihre Bedürfnisse zu finden.",
       workTogether: "Wenn Sie denken, dass ich gut zu Ihrem Unternehmen oder zu Ihren Projekten passe, kontaktieren sie mich!",
       button: "Nachricht senden"

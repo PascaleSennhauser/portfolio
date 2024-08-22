@@ -4,16 +4,16 @@
     <img class="circle-3" src="assets/img/background/ellipse.svg">
     <div class="global-main-container imprint-container">
         <app-header></app-header>
-        <h1>Imprint</h1>
+        <h1>{{ text[languageData.currentLanguage].imprintTitle }}</h1>
         <p>Pascale Sennhauser<br>
         pascale.sennhauser&#64;hotmail.ch<br>
-        Schweiz<br></p>
+        {{ text[languageData.currentLanguage].imprintCountry }}<br></p>
         <p>
-        <h2>Images</h2>
+        <h2>{{ text[languageData.currentLanguage].images }}</h2>
         <p>
         Sass-logo:<a href="https://sass-lang.com/styleguide/brand/" target="_blank"> https://sass-lang.com/styleguide/brand/</a>
         </p>
-        <h1>Privacy Policy</h1>
+        <h1>{{ text[languageData.currentLanguage].privacyPolicyTitle }}</h1>
         <p></p>
     </div>
 </div>
