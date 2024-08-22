@@ -18,7 +18,7 @@ export class LandingPageComponent {
       jobTitle: "FRONTEND<br>DEVELOPER",
     },
     ge: {
-      greeting: "Hello! I heisse Pascale",
+      greeting: "Hallo! Ich heisse Pascale",
       jobTitle: "FRONTEND<br>ENTWICKLERIN",
     }
   }

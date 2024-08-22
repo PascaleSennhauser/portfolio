@@ -42,6 +42,10 @@ textarea {
   align-items: center;
 }
 
+.privacy-policy-agreement:hover {
+  cursor: pointer;
+}
+
 /* Customize the label (the container) */
 .checkbox-container {
   display: block;

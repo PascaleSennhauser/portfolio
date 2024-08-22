@@ -17,7 +17,7 @@ export class ImprintComponent {
     en: {
       imprintTitle: "Imprint",
       imprintCountry: "Switzerland",
-      images: "images",
+      images: "Images",
       privacyPolicyTitle: "Privacy Policy"
     },
     ge: {

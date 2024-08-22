@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
   languageData = inject(LanguageService);
-
+  @Input() pageImprint = false;
   text: any = {
     en: {
       aboutMe: "About me",

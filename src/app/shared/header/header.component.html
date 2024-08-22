@@ -1,9 +1,9 @@
 <header>
         <a (click)="goToLandingPage()" class="logo">&#60;ps&#62;</a>
         <div class="header-menu">
-            <a href="#aboutMe">{{ text[languageData.currentLanguage].aboutMe }}</a>
-            <a href="#skillSet">{{ text[languageData.currentLanguage].skillSet }}</a>
-            <a href="#myWork">{{ text[languageData.currentLanguage].myWork }}</a>
+            <a [class.d-none]="pageImprint" href="#aboutMe">{{ text[languageData.currentLanguage].aboutMe }}</a>
+            <a [class.d-none]="pageImprint"href="#skillSet">{{ text[languageData.currentLanguage].skillSet }}</a>
+            <a [class.d-none]="pageImprint" href="#myWork">{{ text[languageData.currentLanguage].myWork }}</a>
             <div class="language-container">
                 <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{ text[languageData.currentLanguage].german }}</span>
                 <span class="separator">|</span>

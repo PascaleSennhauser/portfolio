@@ -21,15 +21,14 @@
   position: absolute;
   display: block;
   width: 300px;
-  margin-top: 470px;
+  margin-top: 500px;
   margin-right: 500px;
 }
 
 h2 {
   font-family: Baloo;
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 400;
-  line-height: 108px;
   margin: 0;
   color: #5988FF;
   margin-bottom: 60px;
@@ -64,6 +63,8 @@ h3 {
   text-align: left;
   color: black;
   margin-bottom: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 
 .developer-description {
@@ -73,6 +74,8 @@ h3 {
   line-height: 19.2px;
   text-align: left;
   color: #5988FF;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 
 .go-up-button {

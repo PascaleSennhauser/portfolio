@@ -78,11 +78,9 @@ img {
 .button-container {
     margin-top: 10px;
     a {
-        @include standard-button(137px, 58px);
+        @include standard-button(120px, 56px);
         font-family: Montserrat;
         font-weight: 400;
-        font-size: 23px;
-        line-height: 27.6px;
         color:#5988FF;
         display: flex;
         justify-content: center;
