@@ -49,6 +49,10 @@
     line-height: 27.6px;
     color: white;
 
+    @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+
 
     .copyright-sign {
         margin-right: 4px;

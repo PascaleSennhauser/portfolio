@@ -55,6 +55,12 @@
   color: white;
 }
 
+@media (max-width: 1000px) {
+  .imprint-container {
+    font-size: 18px;
+  }
+}
+
 .imprint-container .copyright-sign {
   margin-right: 4px;
 }
