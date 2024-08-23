@@ -24,6 +24,12 @@
   color: #5988FF;
 }
 
+@media (max-width: 1000px) {
+  .imprint-container h1 {
+    font-size: 24px;
+  }
+}
+
 .imprint-container h2 {
   margin-top: 10px;
   margin-bottom: 0;
@@ -34,12 +40,26 @@
   color: #5988FF;
 }
 
+@media (max-width: 1000px) {
+  .imprint-container h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
 .imprint-container p {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .imprint-container p {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .imprint-container a {
@@ -65,6 +85,15 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .circle-1 {
+    margin-top: 0;
+    margin-right: 0;
+    top: -170px;
+    left: -100px;
+  }
+}
+
 .circle-2 {
   position: absolute;
   width: 100px;
@@ -82,5 +111,15 @@
 @media (min-width: 1000px) and (max-width: 1299px) {
   .circle-3 {
     margin-right: -800px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .circle-3 {
+    width: 20px;
+    margin-right: 0;
+    margin-top: 0;
+    right: 40px;
+    top: 400px;
   }
 }
