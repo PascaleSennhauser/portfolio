@@ -26,7 +26,6 @@ header {
 
 .header-menu {
   font-family: Montserrat;
-  gap: 5px;
   height: 32px;
   display: flex;
   justify-content: space-between;
@@ -42,10 +41,23 @@ header {
   color: #5988FF;
 }
 
+@media (min-width: 1300px) and (max-width: 1440px) {
+  .header-menu a {
+    font-size: 16px;
+    width: 140px;
+  }
+}
+
 .header-menu a:hover {
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
+}
+
+@media (min-width: 1300px) and (max-width: 1440px) {
+  .header-menu a:hover {
+    font-size: 16px;
+  }
 }
 
 .language-container {

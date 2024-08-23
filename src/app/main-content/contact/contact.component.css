@@ -22,13 +22,10 @@
   display: block;
   width: 300px;
   margin-top: 500px;
-  margin-right: 500px;
+  margin-right: 400px;
 }
 
 h2 {
-  font-family: Baloo;
-  font-size: 80px;
-  font-weight: 400;
   margin: 0;
   color: #5988FF;
   margin-bottom: 60px;

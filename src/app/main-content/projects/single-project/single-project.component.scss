@@ -33,6 +33,11 @@ h3 {
         line-height: 27.6px;
         text-align: left;
         color: #5988FF;
+
+        @media (min-width: 1000px) and (max-width: 1299px) {
+            font-size: 18px;
+            line-height: 20px;
+        }
     }
 
     div {

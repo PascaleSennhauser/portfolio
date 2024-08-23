@@ -13,14 +13,14 @@
                             (mouseover)="imgSrcLocation = 'assets/img/icons/location-icon-2.png'"
                             (mouseout)="imgSrcLocation = 'assets/img/icons/location-icon-1.png'">
                         <img src="assets/img/icons/location-icon-2.png" class="d-none">
-                        <span [innerHTML]="text[languageData.currentLanguage].located"></span>
+                        <span [innerHTML]="text[languageData.currentLanguage].located" [ngStyle]="{'font-size': '16px'}"></span>
                     </div>
                     <div class="remote-container">
                         <img class="remote-icon" [src]="imgSrcRemote"
                             (mouseover)="imgSrcRemote = 'assets/img/icons/remote-icon-2.png'"
                             (mouseout)="imgSrcRemote = 'assets/img/icons/remote-icon-1.png'">
-                            <img src="assets/img/icons/remote-icon-2.png" class="d-none">
-                        <span [innerHTML]="text[languageData.currentLanguage].remote"></span>
+                        <img src="assets/img/icons/remote-icon-2.png" class="d-none">
+                        <span [innerHTML]="text[languageData.currentLanguage].remote" [ngStyle]="{'font-size': '16px'}"></span>
                     </div>
                 </div>
             </div>
