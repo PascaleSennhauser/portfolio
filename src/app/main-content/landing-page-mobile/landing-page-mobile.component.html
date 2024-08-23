@@ -2,7 +2,7 @@
     <img class="circle-1" src="assets/img/background/ellipse.svg">
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <div id="landingPage" class="global-main-container landing-page-container">
-        <app-header-mobile></app-header-mobile>
+        <app-header-mobile (burgerMenu)="openOverlay($event)" [showLogo]="!openOverlayMenu"></app-header-mobile>
         <div class="greeting">
             <p>{{ text[languageData.currentLanguage].greeting }}</p>
             <h1 [innerHTML]="text[languageData.currentLanguage].jobTitle"></h1>
@@ -14,3 +14,4 @@
         </div>
     </div>
 </div>
+<app-menu-overlay-mobile (dontShowOverlay)="closeOverlay($event)" [showOverlay]="openOverlayMenu"></app-menu-overlay-mobile>

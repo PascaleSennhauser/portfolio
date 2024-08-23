@@ -31,3 +31,7 @@ img {
 img:hover {
   cursor: pointer;
 }
+
+.d-none {
+  display: none;
+}
