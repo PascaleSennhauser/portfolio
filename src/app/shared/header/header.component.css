@@ -12,6 +12,13 @@ header {
   box-sizing: border-box;
 }
 
+@media (max-width: 1000px) {
+  header {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
 .logo {
   font-family: 'Amaranth';
   font-size: 64px;
@@ -67,6 +74,12 @@ header {
   width: 120px;
   font-size: 18px;
   font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .language-container {
+    width: unset;
+  }
 }
 
 .language-container .separator {

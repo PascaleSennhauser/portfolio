@@ -10,6 +10,11 @@ header {
     padding-left: 100px;
     padding-right: 100px;
     box-sizing: border-box;
+
+    @media (max-width: 1000px) {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
 }
 
 .logo {
@@ -64,6 +69,10 @@ header {
     width: 120px;
     font-size: 18px;
     font-weight: 400;
+
+    @media (max-width: 1000px) {
+        width: unset;
+    }
 
     .separator {
         margin-left: 4px;

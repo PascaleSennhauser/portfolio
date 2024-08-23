@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { HeaderMobileComponent } from "../shared/header-mobile/header-mobile.component";
 import { LanguageService } from '../../services/language.service';
+import { HeaderMobileComponent } from '../../shared/header-mobile/header-mobile.component';
 
 @Component({
   selector: 'app-landing-page-mobile',
