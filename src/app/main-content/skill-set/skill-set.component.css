@@ -23,6 +23,12 @@ h2 {
   margin-top: 40px;
 }
 
+@media (max-width: 1000px) {
+  .skills-container {
+    gap: 40px;
+  }
+}
+
 .single-skill-container {
   display: flex;
   flex-direction: column;
@@ -33,19 +39,35 @@ h2 {
   height: 150px;
 }
 
+@media (max-width: 1000px) {
+  .single-skill-container {
+    height: 100px;
+  }
+}
+
 .single-skill-container:hover {
   gap: 21px;
 }
 
 .single-skill-container:hover span {
-  font-family: Montserrat;
-  font-size: 16px;
   font-weight: 700;
   line-height: 19.2px;
 }
 
+@media (max-width: 1000px) {
+  .single-skill-container:hover span {
+    line-height: 16.8px;
+  }
+}
+
 .single-skill-container img {
   width: 75px;
+}
+
+@media (max-width: 1000px) {
+  .single-skill-container img {
+    width: 55px;
+  }
 }
 
 .single-skill-container span {
@@ -55,4 +77,11 @@ h2 {
   line-height: 19.2px;
   text-align: center;
   color: white;
+}
+
+@media (max-width: 1000px) {
+  .single-skill-container span {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
 }

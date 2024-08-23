@@ -14,10 +14,15 @@ h2 {
     line-height: 80px;
     letter-spacing: 0.01em;
 
-    @media (min-width: 1000px) and (max-width: 1299px) {
+    @media (max-width: 1299px) {
         font-size: 56px;
         line-height: 60px;
     }
+
+    @media (max-width: 500px) {
+        font-size: 44px;
+    }
+
 }
 
 .global-background-container {
@@ -34,6 +39,10 @@ h2 {
 
     @media (max-width: 1440px) {
         width: 100%;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 17px;
     }
 }
 

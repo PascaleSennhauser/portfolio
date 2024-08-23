@@ -15,10 +15,16 @@ h2 {
   letter-spacing: 0.01em;
 }
 
-@media (min-width: 1000px) and (max-width: 1299px) {
+@media (max-width: 1299px) {
   h2 {
     font-size: 56px;
     line-height: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 44px;
   }
 }
 
@@ -38,5 +44,11 @@ h2 {
 @media (max-width: 1440px) {
   .global-main-container {
     width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .global-main-container {
+    padding: 17px;
   }
 }
