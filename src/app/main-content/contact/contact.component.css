@@ -17,12 +17,28 @@
   margin-left: 900px;
 }
 
+@media (max-width: 1000px) {
+  .circle-2 {
+    width: 40px;
+    margin-top: 0;
+    margin-left: 0;
+    right: 10px;
+    bottom: 40px;
+  }
+}
+
 .circle-3 {
   position: absolute;
   display: block;
   width: 300px;
   margin-top: 500px;
   margin-right: 400px;
+}
+
+@media (max-width: 1000px) {
+  .circle-3 {
+    display: none;
+  }
 }
 
 h2 {
@@ -34,6 +50,14 @@ h2 {
 .contact-container {
   display: flex;
   margin-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+    z-index: 99;
+    margin-bottom: 80px;
+  }
 }
 
 .description,
@@ -81,6 +105,13 @@ h3 {
   position: absolute;
   bottom: 100px;
   left: 100px;
+}
+
+@media (max-width: 1000px) {
+  .go-up-button {
+    bottom: 17px;
+    left: 17px;
+  }
 }
 
 .go-up-button:hover {

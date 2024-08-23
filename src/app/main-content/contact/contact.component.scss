@@ -15,6 +15,13 @@
     width: 50px;
     margin-top: 800px;
     margin-left: 900px;
+    @media (max-width: 1000px) {
+        width: 40px;
+        margin-top: 0;
+        margin-left: 0;
+        right: 10px;
+        bottom: 40px;
+    }
 }
 
 .circle-3 {
@@ -23,6 +30,10 @@
     width: 300px;
     margin-top: 500px;
     margin-right: 400px;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }
 
 h2 {
@@ -34,6 +45,12 @@ h2 {
 .contact-container {
     display: flex;
     margin-bottom: 40px;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        z-index: 99;
+        margin-bottom: 80px;
+    }
 }
 
 .description,
@@ -81,6 +98,11 @@ h3 {
     position: absolute;
     bottom: 100px;
     left: 100px;
+
+    @media (max-width: 1000px) {
+        bottom: 17px;
+        left: 17px;
+    }
 
     &:hover {
         filter: brightness(1.2);

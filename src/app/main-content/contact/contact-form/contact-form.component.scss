@@ -24,15 +24,22 @@ form {
 
 .input-field {
     @include input-field(50px);
+
+    @media (max-width: 1000px) {
+        max-width: 500px;
+    }
 }
 
 textarea {
     @include input-field(202px);
+
+    @media (max-width: 1000px) {
+        max-width: 500px;
+    }
 }
 
 .privacy-policy-agreement {
     display: flex;
-    align-items: center;
 
     &:hover {
         cursor: pointer;
@@ -74,6 +81,7 @@ textarea {
     background-color: white;
     border: 1px solid #5988FF;
     border-radius: 10%;
+    margin-top: 4px;
 }
 
 /* On mouse-over, add a grey background color */
