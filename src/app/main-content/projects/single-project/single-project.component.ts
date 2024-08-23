@@ -2,6 +2,7 @@ import { Component, Input, inject } from '@angular/core';
 import { Project } from '../../../interfaces/project.interface';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../services/language.service';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-single-project',
@@ -25,6 +26,12 @@ export class SingleProjectComponent {
     linkLiveTest: ''
   };
   @Input() index: number = 0;
+  isBigScreen = window.innerWidth > 1000;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isBigScreen = window.innerWidth > 1000;
+  }
 
   getDescription(): string {
     return this.project.description[this.languageData.currentLanguage as 'en' | 'ge'];

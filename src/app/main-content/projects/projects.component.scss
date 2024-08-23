@@ -8,6 +8,14 @@
     width: 100px;
     margin-top: 15px;
     margin-left: 100px;
+
+    @media (max-width: 1000px) {
+        margin-top: 0;
+        margin-left: 0;
+        width: 40px;
+        right: 40px;
+        top: 20px;
+    }
 }
 
 .circle-2 {
@@ -15,6 +23,14 @@
     width: 200px;
     margin-top: 150px;
     margin-left: 800px;
+
+    @media (max-width: 1000px) {
+        margin-top: 0;
+        margin-left: 0;
+        width: 20px;
+        right: 30%;
+        top: 80px;
+    }
 }
 
 .circle-3 {
@@ -71,12 +87,22 @@ p {
     width: 50%;
     margin-top: 40px;
     margin-bottom: 40px;
+
+    @media (max-width: 1000px) {
+        font-size: 16px;
+        line-height: 19.2px;
+        width: 100%;
+    }
 }
 
 .projects-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media (max-width: 1000px) {
+        gap: 80px;
+    }
 }
 
 app-single-project {
@@ -84,8 +110,21 @@ app-single-project {
     display: flex;
     align-items: end;
     gap: 60px;
+
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 }
 
 app-single-project:nth-child(2n) {
     flex-direction: row-reverse;
+
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

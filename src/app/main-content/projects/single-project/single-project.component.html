@@ -9,8 +9,10 @@
             }
         }
     </div>
-    <p class="description" [ngStyle]="{'text-align': index % 2 == 0 ? 'left' : 'right'}">{{ getDescription() }}</p>
-    <div class="button-container">
-        <a href={{project.linkGitHub}} target="_blank">Github</a>
+    <p class="description" [ngStyle]="{'text-align': isBigScreen ? (index % 2 === 0 ? 'left' : 'right') : 'center'}">{{ getDescription() }}</p>
+    <div class="button-container-wrapper">
+        <div class="button-container">
+            <a href={{project.linkGitHub}} target="_blank">Github</a>
+        </div>
     </div>
 </div>

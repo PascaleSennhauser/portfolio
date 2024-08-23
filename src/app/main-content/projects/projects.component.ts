@@ -68,7 +68,7 @@ export class ProjectsComponent {
       description: "Explore a selection of my work here. Click on the image of a project to test it live."
     },
     ge: {
-      title: "Meine Projekte",
+      title: "Projekte",
       description: "Entdecken Sie hier eine Auswahl meiner Arbeiten. Klicken Sie auf das Bild eines Projektes, um es live zu testen."
     }
   }
