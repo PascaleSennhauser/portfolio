@@ -6,11 +6,12 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from '../services/language.service';
+import { LandingPageMobileComponent } from "./landing-page-mobile/landing-page-mobile.component";
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [LandingPageComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, ContactComponent],
+  imports: [LandingPageComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, ContactComponent, LandingPageMobileComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
