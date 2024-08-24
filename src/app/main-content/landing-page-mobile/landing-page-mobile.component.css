@@ -2,6 +2,7 @@
   height: 100vh;
   background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
   position: relative;
+  overflow: hidden;
 }
 
 .background-container .circle-1 {

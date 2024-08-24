@@ -3,6 +3,7 @@ import { Project } from '../../../interfaces/project.interface';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../services/language.service';
 import { HostListener } from '@angular/core';
+import { WINDOW } from '../../../services/window-token';
 
 @Component({
   selector: 'app-single-project',
@@ -13,6 +14,7 @@ import { HostListener } from '@angular/core';
 })
 export class SingleProjectComponent {
   languageData = inject(LanguageService);
+  private _window = inject(WINDOW);
   @Input() project: Project = {
     name: 'Join',
     folderPath: '../../join/index.html',
@@ -26,11 +28,12 @@ export class SingleProjectComponent {
     linkLiveTest: ''
   };
   @Input() index: number = 0;
-  isBigScreen = window.innerWidth > 1000;
+  isBigScreen = this._window.innerWidth > 1000;
 
   @HostListener('window:resize', ['$event'])
+
   onResize(event: Event) {
-    this.isBigScreen = window.innerWidth > 1000;
+      this.isBigScreen = this._window.innerWidth > 1000;
   }
 
   getDescription(): string {
