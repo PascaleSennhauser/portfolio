@@ -12,7 +12,6 @@ import { MenuOverlayMobileComponent } from "../../shared/menu-overlay-mobile/men
 })
 export class LandingPageMobileComponent {
   languageData = inject(LanguageService);
-
   text: any = {
     en: {
       greeting: "Hello! I am Pascale",

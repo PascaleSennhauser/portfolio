@@ -26,6 +26,10 @@ header {
     &:hover {
         cursor: pointer;
         filter: drop-shadow(2px 2px 4px white);
+
+        @media (max-width: 1000px) {
+            filter: unset;
+        }
     }
 }
 

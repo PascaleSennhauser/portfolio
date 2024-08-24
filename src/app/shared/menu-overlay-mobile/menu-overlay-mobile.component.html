@@ -4,9 +4,14 @@
         <img class="close-icon" src="assets/img/icons/close-icon.png" (click)="closeOverlayMenu()">
     </div>
     <nav>
-        <span>About me</span>
-        <span>Skill set</span>
-        <span>My work</span>
-        <span>Contact</span>
+        <span>{{ text[languageData.currentLanguage].aboutMe }}</span>
+        <span>{{ text[languageData.currentLanguage].skillSet }}</span>
+        <span>{{ text[languageData.currentLanguage].myWork }}</span>
+        <span>{{ text[languageData.currentLanguage].contact }}</span>
+        <div class="language-container">
+            <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{ text[languageData.currentLanguage].german }}</span>
+            <span class="separator">|</span>
+            <span class="en" [class.language-bold]="languageData.currentLanguage == 'en'" (click)="setLanguage('en')">{{ text[languageData.currentLanguage].english }}</span>
+        </div>
     </nav>
 </div>

@@ -49,6 +49,12 @@ h2 {
   gap: 21px;
 }
 
+@media (max-width: 1000px) {
+  .single-skill-container:hover {
+    gap: 10px;
+  }
+}
+
 .single-skill-container:hover span {
   font-weight: 700;
   line-height: 19.2px;
@@ -57,6 +63,7 @@ h2 {
 @media (max-width: 1000px) {
   .single-skill-container:hover span {
     line-height: 16.8px;
+    font-weight: unset;
   }
 }
 

@@ -52,8 +52,9 @@
 nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 215px;
-  width: 120px;
+  width: 200px;
   gap: 29px;
 }
 
@@ -63,11 +64,44 @@ nav span {
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
-  text-align: left;
   color: #5988FF;
 }
 
 nav span:hover {
   font-weight: bold;
   cursor: pointer;
+}
+
+.language-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .language-container {
+    width: unset;
+  }
+}
+
+.language-container .separator {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.language-container .separator:hover {
+  cursor: default;
+  font-weight: unset;
+}
+
+.de:hover,
+.en:hover {
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.language-bold {
+  font-size: 23px !important;
+  font-weight: 700 !important;
 }

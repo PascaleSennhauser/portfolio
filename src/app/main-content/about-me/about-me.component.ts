@@ -20,7 +20,7 @@ export class AboutMeComponent {
       Iam: "I am",
       located: "located in<br>Winterthur",
       remote: "open to work<br>remote",
-      aboutMe: "I am a frontend developer based in Winterthur, near Zurich. My passion for programming stems from my love for logical thinking and the drive to creat appealing projects. To stay up-to-date and continously improve my skills, I dedicate time to self-eductaion. My diverse professional background, including experience as a business administrator, as well as working in the health and social sector, has provided me with valuable competences. I have developed skills such as quickly learning new concepts, addressing customer needs and remaining flexible - qulities that benefit me as a developer. Additionally, I enjoy solving complex problems and working with clients and in a team.",
+      aboutMe: "I am a frontend developer based in Winterthur, near Zurich. My passion for programming stems from my love for logical thinking and the drive to create appealing projects. To stay up-to-date and continously improve my skills, I dedicate time to self-eductaion. My diverse professional background, including experience as a business administrator, as well as working in the health and social sector, has provided me with valuable competences. I have developed skills such as quickly learning new concepts, addressing customer needs and remaining flexible - qualities that benefit me as a developer. Additionally, I enjoy solving complex problems and working with clients and in a team.",
       workTogether: "If you think I'd be a good fit for your company or projects, contact me!",
       button: "Send a message"
     },

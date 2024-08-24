@@ -43,12 +43,17 @@ h2 {
     &:hover {
         gap: 21px;
 
+        @media (max-width: 1000px) {
+            gap: 10px;
+        }
+
         span {
             font-weight: 700;
             line-height: 19.2px;
 
             @media (max-width: 1000px) {
                 line-height: 16.8px;
+                font-weight: unset;
             }
         }
     }

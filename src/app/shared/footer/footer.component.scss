@@ -36,6 +36,10 @@
     &:hover {
         cursor: pointer;
         filter: drop-shadow(2px 2px 4px white);
+
+        @media (max-width: 1000px) {
+            filter: unset;
+        }
     }
 }
 
@@ -71,6 +75,11 @@
             cursor: pointer;
             transition: all 200ms ease-in-out;
             transform: scale(1.2);
+
+            @media (max-width: 1000px) {
+                transition: unset;
+                transform: unset;
+            }
         }
     }
 }

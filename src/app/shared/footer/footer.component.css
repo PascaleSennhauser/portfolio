@@ -44,6 +44,12 @@
   filter: drop-shadow(2px 2px 4px white);
 }
 
+@media (max-width: 1000px) {
+  .logo:hover {
+    filter: unset;
+  }
+}
+
 .imprint-container {
   display: flex;
   flex-direction: column;
@@ -80,6 +86,13 @@
   cursor: pointer;
   transition: all 200ms ease-in-out;
   transform: scale(1.2);
+}
+
+@media (max-width: 1000px) {
+  .icon-container img:hover {
+    transition: unset;
+    transform: unset;
+  }
 }
 
 .imprint {

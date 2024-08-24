@@ -68,8 +68,9 @@
   gap: 4px;
 }
 
-.scroll-container span {
+.scroll-container a {
   font-family: Montserrat;
+  text-decoration: none;
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
