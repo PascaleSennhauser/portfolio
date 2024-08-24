@@ -8,6 +8,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
+
 export class SkillSetComponent {
   skills: Array<any> = [
     {
@@ -66,5 +67,4 @@ export class SkillSetComponent {
       title: "Fähigkeiten"
     }
   }
-
 }

@@ -9,9 +9,9 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
+
 export class LandingPageComponent {
   languageData = inject(LanguageService);
-  
   text: any = {
     en: {
       greeting: "Hello! I am Pascale",

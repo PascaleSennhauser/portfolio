@@ -25,10 +25,21 @@ export class LandingPageMobileComponent {
   openOverlayMenu: boolean = false;
 
 
+  /**
+   * This method sets the variable openOverlayMenu to true or false.
+   * The overlay menu reacts accordingly to it.
+   * @param boolean - The variable for the overlay menu true or false.
+   */
   openOverlay(boolean: boolean) {
     this.openOverlayMenu = boolean;
   }
 
+
+  /**
+   * This method sets the variable openOverlayMenu to true or false.
+   * The overlay menu reacts accordingly to it.
+   * @param boolean - The variable for the overlay menu true or false.
+   */
   closeOverlay(boolean: boolean) {
     this.openOverlayMenu = boolean;
   }

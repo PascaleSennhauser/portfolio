@@ -9,9 +9,9 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
 export class ContactComponent {
   languageData = inject(LanguageService);
-
   text: any = {
     en: {
       title: "Contact",
@@ -27,5 +27,4 @@ export class ContactComponent {
       developerDescription: "Brauchen Sie eine Frontend Entwicklerin?<b> Kontaktieren Sie mich!</b>"
     }
   }
-
 }
