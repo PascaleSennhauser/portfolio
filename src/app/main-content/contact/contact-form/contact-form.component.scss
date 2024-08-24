@@ -13,13 +13,53 @@
     line-height: 19.2px;
     text-align: left;
 
+    &:hover {
+        border: 2px solid #5988FF;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid #5988FF;
+    }
+
+}
+
+label {
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+
+    @media(max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+    }
+}
+
+img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.required-text {
+    display: block;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #E61C40;
+    width: 100%;
+    text-align: left;
+    line-height: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 504px;
+    min-height: 504px;
 
     @media (max-width: 1000px) {
         align-items: center;
@@ -28,11 +68,11 @@ form {
 
 .input-field {
     @include input-field(50px);
-
     @media (max-width: 1000px) {
         max-width: 600px;
     }
 }
+
 
 textarea {
     @include input-field(202px);
@@ -145,6 +185,7 @@ textarea {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 24px;
 
     button {
         width: 181px;

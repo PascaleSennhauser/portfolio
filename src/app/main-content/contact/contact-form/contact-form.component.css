@@ -1,8 +1,41 @@
+label {
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1000px) {
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+  }
+}
+
+img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.required-text {
+  display: block;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #E61C40;
+  width: 100%;
+  text-align: left;
+  line-height: 30px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 504px;
+  min-height: 504px;
 }
 
 @media (max-width: 1000px) {
@@ -27,6 +60,15 @@ form {
   text-align: left;
 }
 
+.input-field:hover {
+  border: 2px solid #5988FF;
+}
+
+.input-field:focus {
+  outline: none;
+  border: 1px solid #5988FF;
+}
+
 @media (max-width: 1000px) {
   .input-field {
     max-width: 600px;
@@ -47,6 +89,15 @@ textarea {
   font-weight: 400;
   line-height: 19.2px;
   text-align: left;
+}
+
+textarea:hover {
+  border: 2px solid #5988FF;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #5988FF;
 }
 
 @media (max-width: 1000px) {
@@ -157,6 +208,7 @@ textarea {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 24px;
 }
 
 .button-container button {

@@ -1,14 +1,37 @@
 <form>
-    <input class="input-field" type="text" placeholder="Your name" required>
-    <input class="input-field" type="email" placeholder="Your email" required>
-    <textarea placeholder="Your message"></textarea>
+    <label>
+        <input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (blur)="checkNameInput(); firstNameInput()" (input)="checkNameInput()" class="input-field"
+            type="text" placeholder="Your name" required>
+        <img src="assets/img/icons/correct-input.png" [ngStyle]="{'display': !noValidName && !isFirstNameInput ? 'unset' : 'none'}">
+        <img src="assets/img/icons/false-input.png" [ngStyle]="{'display': noValidName && !isFirstNameInput ? 'unset' : 'none'}">
+        <span class="required-text" [ngStyle]="{'display': noValidName && !isFirstNameInput ? 'unset' : 'none'}">Your name is required</span>
+    </label>
+
+    <label>
+        <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" (blur)="checkMailInput(); firstMailInput()" (input)="checkMailInput()" class="input-field" type="email" placeholder="Your email" required>
+        <img src="assets/img/icons/correct-input.png" [ngStyle]="{'display': !noValidMail && !isFirstMailInput ? 'unset' : 'none'}">
+        <img src="assets/img/icons/false-input.png" [ngStyle]="{'display': noValidMail && !isFirstMailInput ? 'unset' : 'none'}">
+        <span class="required-text" [ngStyle]="{'display': noValidMail && !isFirstMailInput ? 'unset' : 'none'}">Your email is required</span>
+    </label>
+
+    <label>
+        <textarea [(ngModel)]="message" [ngModelOptions]="{standalone: true}" (blur)="checkMessageInput(); firstMessageInput()" (input)="checkMessageInput()" placeholder="Your message"></textarea>
+        <img src="assets/img/icons/correct-input.png" [ngStyle]="{'display': !noValidMessage && !isFirstMessageInput ? 'unset' : 'none'}">
+        <img src="assets/img/icons/false-input.png" [ngStyle]="{'display': noValidMessage && !isFirstMessageInput ? 'unset' : 'none'}">
+        <span class="required-text" [ngStyle]="{'display': noValidMessage && !isFirstMessageInput ? 'unset' : 'none'}">Your message is empty</span>
+    </label>
+
+
     <div class="privacy-policy-agreement">
         <label class="checkbox-container">
             <input class="checkbox-button" type="checkbox" required>
             <span class="customized-checkbox-button"></span>
         </label>
-        <span class="agreement">I've read the <a class="agreement-link" (click)="goToImprint()">privacy policy</a> and agree to the processing of my data as outlined. </span>
+        <span class="agreement">I've read the <a class="agreement-link" (click)="goToImprint()">privacy policy</a> and
+            agree to the processing of my data as outlined. </span>
     </div>
+  <!--   <span class="required-text">Please accept the privacy policy</span> -->
+
     <div class="button-container">
         <button type="submit" disabled>Say hello :)</button>
     </div>
