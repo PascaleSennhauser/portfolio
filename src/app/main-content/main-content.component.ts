@@ -11,11 +11,12 @@ import { Router } from '@angular/router';
 import { NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { WINDOW } from '../services/window-token';
+import { MobileOverlayComponent } from "../shared/mobile-overlay/mobile-overlay.component";
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [LandingPageComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, ContactComponent, LandingPageMobileComponent],
+  imports: [LandingPageComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, ContactComponent, LandingPageMobileComponent, MobileOverlayComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

@@ -157,13 +157,13 @@
 }
 
 .icon-container-wrapper .icon-container img {
-  transition: all 200ms linear;
+  transition: all 125ms linear;
   transform: translateX(0px);
   width: 30px;
   height: 30px;
 }
 
 .icon-container-wrapper .icon-container img:hover {
-  transition: all 200ms linear;
+  transition: all 125ms linear;
   transform: translateX(-10px);
 }

@@ -78,13 +78,13 @@
 }
 
 .icon-container img {
-  transition: all 200ms ease-in-out;
+  transition: all 125ms ease-in-out;
   transform: scale(1);
 }
 
 .icon-container img:hover {
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+  transition: all 125ms ease-in-out;
   transform: scale(1.2);
 }
 
@@ -112,7 +112,7 @@
 
 .imprint:before {
   z-index: -1;
-  transition: 250ms ease-in-out;
+  transition: 125ms ease-in-out;
   content: '';
   position: absolute;
   bottom: 0;

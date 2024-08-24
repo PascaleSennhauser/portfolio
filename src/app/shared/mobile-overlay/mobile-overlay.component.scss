@@ -1,0 +1,36 @@
+.background-container {
+    display: none;
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .background-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 200;
+        background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+        color: black;
+    
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            span {
+                font-family: 'Montserrat';
+                font-size: 23px;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    img {
+        width: 200px;
+    }
+}

@@ -69,11 +69,11 @@
     justify-content: space-between;
 
     img {
-        transition: all 200ms ease-in-out;
+        transition: all 125ms ease-in-out;
         transform: scale(1);
         &:hover {
             cursor: pointer;
-            transition: all 200ms ease-in-out;
+            transition: all 125ms ease-in-out;
             transform: scale(1.2);
 
             @media (max-width: 1000px) {
@@ -100,7 +100,7 @@
 
     &:before {
         z-index: -1;
-        transition: 250ms ease-in-out;
+        transition: 125ms ease-in-out;
         content: '';
         position: absolute;
         bottom: 0;

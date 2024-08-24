@@ -80,7 +80,7 @@ img {
     aspect-ratio: 1340 / 860;
     object-fit: fill;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 200ms ease-in-out;
+    transition: all 125ms ease-in-out;
     transform: scale(1);
 
     @media (max-width: 1000px) {
@@ -91,7 +91,7 @@ img {
 
     &:hover {
         cursor: pointer;
-        transition: all 200ms ease-in-out;
+        transition: all 125ms ease-in-out;
         transform: scale(1.2);
 
         @media (max-width: 1000px) {

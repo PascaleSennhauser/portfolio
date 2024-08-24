@@ -5,6 +5,12 @@ form {
   height: 504px;
 }
 
+@media (max-width: 1000px) {
+  form {
+    align-items: center;
+  }
+}
+
 .input-field {
   width: 100%;
   height: 50px;
@@ -23,7 +29,7 @@ form {
 
 @media (max-width: 1000px) {
   .input-field {
-    max-width: 500px;
+    max-width: 600px;
   }
 }
 
@@ -45,7 +51,7 @@ textarea {
 
 @media (max-width: 1000px) {
   textarea {
-    max-width: 500px;
+    max-width: 600px;
   }
 }
 
@@ -55,6 +61,12 @@ textarea {
 
 .privacy-policy-agreement:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .privacy-policy-agreement {
+    max-width: 600px;
+  }
 }
 
 /* Customize the label (the container) */
