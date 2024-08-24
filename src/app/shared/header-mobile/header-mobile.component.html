@@ -1,5 +1,4 @@
 <header>
     <a [ngClass]="{'d-none': !this.showLogo}">&#60;ps&#62;</a>
-    <div [ngClass]="{'d-none': this.showLogo}"></div>
-    <img src="assets/img/icons/burger menu.png" (click)="showOverlayMenu()">
+    <img [ngClass]="{'d-none': !this.showLogo}" src="assets/img/icons/burger menu.png" (click)="showOverlayMenu()">
 </header>

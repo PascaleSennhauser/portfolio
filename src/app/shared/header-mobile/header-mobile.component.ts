@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header-mobile.component.scss'
 })
 export class HeaderMobileComponent {
-  @Input()showLogo:boolean = true;
-  @Output()burgerMenu = new EventEmitter<boolean>();
+  @Input()showLogo: boolean = true;
+  @Output()activatedBurgerMenu = new EventEmitter<boolean>();
 
   showOverlayMenu() {
-    this.burgerMenu.emit(true);
+    this.activatedBurgerMenu.emit(true);
   }
 }
