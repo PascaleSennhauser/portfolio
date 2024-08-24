@@ -2,6 +2,10 @@ import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { LanguageService } from '../services/language.service';
 import { ActivatedRoute } from '@angular/router';
+import { WINDOW } from '../services/window-token';
+import { Router } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-imprint',
@@ -12,6 +16,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ImprintComponent {
   languageData = inject(LanguageService);
+  private _window = inject(WINDOW);
 
   text: any = {
     en: {
@@ -28,12 +33,17 @@ export class ImprintComponent {
     }
   }
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.languageData.currentLanguage = params['lang'];
+      });
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => {
+        this._window.scrollTo(0, 0);
       });
   }
 

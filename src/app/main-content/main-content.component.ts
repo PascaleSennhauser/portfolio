@@ -7,6 +7,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { LandingPageMobileComponent } from "./landing-page-mobile/landing-page-mobile.component";
+import { Router } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
+import { WINDOW } from '../services/window-token';
 
 @Component({
   selector: 'app-main-content',
@@ -17,8 +21,9 @@ import { LandingPageMobileComponent } from "./landing-page-mobile/landing-page-m
 })
 export class MainContentComponent {
   languageData = inject(LanguageService);
+  private _window = inject(WINDOW);
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -27,6 +32,11 @@ export class MainContentComponent {
         if (lang) {
           this.languageData.currentLanguage = params['lang'];
         }
+        });
+        this.router.events.pipe(
+          filter(event => event instanceof NavigationEnd)
+        ).subscribe(() => {
+          this._window.scrollTo(0, 0);
         });
     }
 }

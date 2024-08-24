@@ -1,6 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
+import { WINDOW } from '../../services/window-token';
+import { NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +14,7 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
   languageData = inject(LanguageService);
+  private _window = inject(WINDOW);
 
   text: any = {
     en: {
@@ -29,6 +33,11 @@ export class FooterComponent {
   }
 
   goToLandingPage() {
-    this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
+    console.log(this.router.url);
+    if (this.router.url.includes('mainComponent')) {
+        this._window.scrollTo(0, 0);
+    } else {
+      this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
+    }
   }
 }
