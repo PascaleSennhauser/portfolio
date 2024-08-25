@@ -12,7 +12,7 @@
     margin-top: -103px;
     z-index: -99;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1025px) {
         width: 80px;
         height: 80px;
         margin-top: 0;
@@ -28,7 +28,7 @@
     margin-left: 800px;
     margin-top: 30px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1025px) {
         margin-left: 0;
         margin-top: 0;
         top: 30px;
@@ -42,7 +42,7 @@
     color: #5988FF;
     font-family: Montserrat;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1025px) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -60,7 +60,7 @@
     padding-right: 60px;
     box-sizing: border-box;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1025px) {
         padding-right: 0;
         width: 100%;
     }
@@ -94,14 +94,14 @@
         padding-right: 60px;
         box-sizing: border-box;
 
-        @media (min-width: 1000px) and (max-width: 1299px){
+        @media (min-width: 1025px) and (max-width: 1299px){
             padding-left: 0px;
             padding-right: 0px;
             gap: 30px;
             justify-content: center;
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1025px) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -122,7 +122,7 @@
             width: 32.5px;
             height: 40px;
 
-            @media (max-width: 1000px) {
+            @media (max-width: 1025px) {
                 display: none;
             }
 
@@ -136,7 +136,7 @@
             width: 53.58px;
             height: 46.99px;
 
-            @media (max-width: 1000px) {
+            @media (max-width: 1025px) {
                 display: none;
             }
 
@@ -148,7 +148,7 @@
 
         .icon-mobile {
             display: none;
-            @media (max-width: 1000px) {
+            @media (max-width: 1025px) {
                 display: unset;
             }
         }
