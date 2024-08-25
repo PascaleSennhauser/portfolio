@@ -3,26 +3,28 @@ import { Router } from '@angular/router';
 import { LanguageService } from '../../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [ CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
 
 export class ContactFormComponent {
   languageData = inject(LanguageService);
-  noValidName: boolean = false;
-  name = "";
-  isFirstNameInput: boolean = true;
-  noValidMail: boolean = false;
-  email = "";
-  isFirstMailInput: boolean = true;
-  noValidMessage: boolean = false;
-  message = "";
-  isFirstMessageInput: boolean = true;
+  http = inject(HttpClient);
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+  };
+  checkbox = false;
+  mailTest = true;
+
 
   /**
    * Constructor for the component, which initilizes the Router.
@@ -40,41 +42,34 @@ export class ContactFormComponent {
     this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
   }
 
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
-  checkNameInput() {
-    if (this.name.length < 2) {
-      this.noValidName = true;
-    } else {
-      this.noValidName = false;
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
     }
   }
-
-  firstNameInput() {
-    this.isFirstNameInput = false;
-  }
-
-  checkMailInput() {
-    if (this.email.length < 2) {
-      this.noValidMail = true;
-    } else {
-      this.noValidMail = false;
-    }
-  }
-
-  firstMailInput() {
-    this.isFirstMailInput = false;
-  }
-
-  checkMessageInput() {
-    if (this.message.length < 2) {
-      this.noValidMessage = true;
-    } else {
-      this.noValidMessage = false;
-    }
-  }
-
-  firstMessageInput() {
-    this.isFirstMessageInput = false;
-  }
-
 }

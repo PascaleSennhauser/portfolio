@@ -2,8 +2,6 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
 import { WINDOW } from '../../services/window-token';
-import { NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-footer',

@@ -13,6 +13,7 @@
     }
 }
 
+
 .upper-container {
     display: flex;
     justify-content: space-between;
@@ -64,9 +65,9 @@
 }
 
 .icon-container {
-    width: 174px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    gap: 20px;
 
     img {
         transition: all 125ms ease-in-out;

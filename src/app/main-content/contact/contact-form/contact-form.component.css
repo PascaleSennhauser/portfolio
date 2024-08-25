@@ -212,16 +212,20 @@ textarea:focus {
 }
 
 .button-container button {
-  width: 181px;
-  height: 58px;
-  border-radius: 10px;
-  border: 2px solid #BBBBBB;
-  padding: 15px 30px 15px 30px;
-  box-sizing: border-box;
+  padding: 13px 24px 13px 24px;
   gap: 10px;
+  border-radius: 10px;
+  opacity: 0px;
   font-family: Montserrat;
-  font-size: 20px;
+  border: 2px solid #5988FF;
+  font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
-  text-align: center;
+  text-align: left;
+  color: #5988FF;
+  background-color: unset;
+}
+
+.button-container button:hover {
+  cursor: pointer;
 }

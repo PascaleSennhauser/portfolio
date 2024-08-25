@@ -150,7 +150,8 @@
 .icon-container-wrapper .icon-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
   height: 170px;
 }
 
