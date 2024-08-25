@@ -9,9 +9,11 @@
         <span>{{ text[languageData.currentLanguage].myWork }}</span>
         <span>{{ text[languageData.currentLanguage].contact }}</span>
         <div class="language-container">
-            <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{ text[languageData.currentLanguage].german }}</span>
+            <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{
+                text[languageData.currentLanguage].german }}</span>
             <span class="separator">|</span>
-            <span class="en" [class.language-bold]="languageData.currentLanguage == 'en'" (click)="setLanguage('en')">{{ text[languageData.currentLanguage].english }}</span>
+            <span class="en" [class.language-bold]="languageData.currentLanguage == 'en'" (click)="setLanguage('en')">{{
+                text[languageData.currentLanguage].english }}</span>
         </div>
     </nav>
 </div>

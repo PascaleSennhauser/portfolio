@@ -10,6 +10,7 @@ import { MenuOverlayMobileComponent } from "../../shared/menu-overlay-mobile/men
   templateUrl: './landing-page-mobile.component.html',
   styleUrl: './landing-page-mobile.component.scss'
 })
+
 export class LandingPageMobileComponent {
   languageData = inject(LanguageService);
   text: any = {

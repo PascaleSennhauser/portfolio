@@ -8,11 +8,11 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
+
     @media (max-width: 1000px) {
         gap: 20px;
     }
 }
-
 
 .upper-container {
     display: flex;
@@ -72,6 +72,7 @@
     img {
         transition: all 125ms ease-in-out;
         transform: scale(1);
+
         &:hover {
             cursor: pointer;
             transition: all 125ms ease-in-out;

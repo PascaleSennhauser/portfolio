@@ -94,7 +94,7 @@
         padding-right: 60px;
         box-sizing: border-box;
 
-        @media (min-width: 1025px) and (max-width: 1299px){
+        @media (min-width: 1025px) and (max-width: 1299px) {
             padding-left: 0px;
             padding-right: 0px;
             gap: 30px;
@@ -148,6 +148,7 @@
 
         .icon-mobile {
             display: none;
+
             @media (max-width: 1025px) {
                 display: unset;
             }

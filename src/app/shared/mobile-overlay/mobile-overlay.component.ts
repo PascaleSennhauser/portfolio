@@ -8,6 +8,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './mobile-overlay.component.html',
   styleUrl: './mobile-overlay.component.scss'
 })
+
 export class MobileOverlayComponent {
   languageData = inject(LanguageService);
   text: any = {

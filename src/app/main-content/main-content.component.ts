@@ -50,7 +50,7 @@ export class MainContentComponent {
     this.scrollWindowToTop();
   }
 
-  
+
   /**
    * This method sets the current language through the added language parameter in the router path.
    */

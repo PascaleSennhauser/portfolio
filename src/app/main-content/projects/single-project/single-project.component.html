@@ -3,16 +3,17 @@
     <h3>{{ project.name }}</h3>
     <div class="technology-container">
         @for (technology of project.usedTechnologies; let i = $index; track technology) {
-            <span class="technologies">{{ technology }}</span>
-            @if (i+1 < project.usedTechnologies.length) {
-                <div class="separator"></div>
-            }
-        }
+        <span class="technologies">{{ technology }}</span>
+        @if (i+1 < project.usedTechnologies.length) { <div class="separator">
     </div>
-    <p class="description" [ngStyle]="{'text-align': isBigScreen ? (index % 2 === 0 ? 'left' : 'right') : 'center'}">{{ getDescription() }}</p>
-    <div class="button-container-wrapper">
-        <div class="button-container">
-            <a href={{project.linkGitHub}} target="_blank">Github</a>
-        </div>
+    }
+    }
+</div>
+<p class="description" [ngStyle]="{'text-align': isBigScreen ? (index % 2 === 0 ? 'left' : 'right') : 'center'}">{{
+    getDescription() }}</p>
+<div class="button-container-wrapper">
+    <div class="button-container">
+        <a href={{project.linkGitHub}} target="_blank">Github</a>
     </div>
+</div>
 </div>

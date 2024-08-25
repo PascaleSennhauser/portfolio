@@ -8,7 +8,8 @@
             <div class="description">
                 <h3>{{ text[languageData.currentLanguage].title }}</h3>
                 <p class="contact-description">{{ text[languageData.currentLanguage].contactDescription}}</p>
-                <p class="developer-description" [innerHTML]="text[languageData.currentLanguage].developerDescription"></p>
+                <p class="developer-description" [innerHTML]="text[languageData.currentLanguage].developerDescription">
+                </p>
             </div>
             <app-contact-form></app-contact-form>
         </div>

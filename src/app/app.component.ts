@@ -13,6 +13,7 @@ import { MobileOverlayComponent } from "./shared/mobile-overlay/mobile-overlay.c
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = 'portfolio';
   languageData = inject(LanguageService);

@@ -10,6 +10,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './menu-overlay-mobile.component.html',
   styleUrl: './menu-overlay-mobile.component.scss'
 })
+
 export class MenuOverlayMobileComponent {
   languageData = inject(LanguageService);
   @Input() showOverlay: boolean = false;

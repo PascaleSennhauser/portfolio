@@ -33,7 +33,7 @@ export class FooterComponent {
   goToLandingPage() {
     console.log(this.router.url);
     if (this.router.url.includes('mainComponent')) {
-        this._window.scrollTo(0, 0);
+      this._window.scrollTo(0, 0);
     } else {
       this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
     }

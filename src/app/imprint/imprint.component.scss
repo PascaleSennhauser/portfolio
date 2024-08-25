@@ -35,6 +35,7 @@
         font-weight: 100;
         line-height: 45px;
         color: #5988FF;
+
         @media (max-width: 1000px) {
             font-size: 18px;
             line-height: 20px;
@@ -47,6 +48,7 @@
         font-weight: 400;
         line-height: 22px;
         text-align: left;
+
         @media (max-width: 1000px) {
             font-size: 16px;
             line-height: 18px;
@@ -94,9 +96,11 @@
     width: 80px;
     margin-right: -1100px;
     margin-top: 400px;
+
     @media (min-width: 1000px) and (max-width: 1299px) {
         margin-right: -800px;
     }
+
     @media (max-width: 1000px) {
         width: 20px;
         margin-right: 0;

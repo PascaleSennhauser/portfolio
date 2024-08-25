@@ -10,6 +10,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
+
 export class ProjectsComponent {
   languageData = inject(LanguageService);
   projects: Array<Project> = [
@@ -28,7 +29,7 @@ export class ProjectsComponent {
     {
       name: 'El Pollo Loco',
       folderPath: '../../EPL/index.html',
-      usedTechnologies: ['JavaScript', 'HTML', 'CSS' ],
+      usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
       description: {
         en: 'Jump, run and throw game based on object-oriented approach. Help Pepe to get the magical Salsa Bottle back by fighting against chicken, chicks and the "Pollo Loco".',
         ge: 'Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, die magische Salsaflasche zurückzubekommen, indem du gegen Hühner, Küken und das "Pollo Loco" kämpfst.',
@@ -40,7 +41,7 @@ export class ProjectsComponent {
     {
       name: 'Pokédex',
       folderPath: '../../Pokedex/index.html',
-      usedTechnologies: ['JavaScript', 'HTML', 'CSS', 'Api' ],
+      usedTechnologies: ['JavaScript', 'HTML', 'CSS', 'Api'],
       description: {
         en: 'Based on the PokéAPI library that provieds and catalogues pokémon information.',
         ge: 'Basiert auf der PokéAPI-Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.',
@@ -52,7 +53,7 @@ export class ProjectsComponent {
     {
       name: 'Portfolio',
       folderPath: 'index.html',
-      usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'SCSS' ],
+      usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
       description: {
         en: 'My portfolio page, to introduce myself and highlight my web programming skills. It\'s the page you\'re looking at right now.',
         ge: 'Mein Portfolio, um mich vorzustellen und meine Fähigkeiten in der Webprogrammierung hervorzuheben. Das ist die Seite, die Sie sich gerad ansehen.',

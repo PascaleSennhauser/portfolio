@@ -7,7 +7,7 @@ import { WINDOW } from '../../../services/window-token';
 @Component({
   selector: 'app-single-project',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [CommonModule],
   templateUrl: './single-project.component.html',
   styleUrl: './single-project.component.scss'
 })
@@ -18,7 +18,7 @@ export class SingleProjectComponent {
   @Input() project: Project = {
     name: 'Join',
     folderPath: '../../join/index.html',
-    usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase' ],
+    usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
     description: {
       en: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       ge: 'De',
@@ -37,7 +37,7 @@ export class SingleProjectComponent {
    * When the window is bigger than 1000px, it's a big screen and the project description gets adapted.
    */
   onResize(event: Event) {
-      this.isBigScreen = this._window.innerWidth > 1000;
+    this.isBigScreen = this._window.innerWidth > 1000;
   }
 
 
