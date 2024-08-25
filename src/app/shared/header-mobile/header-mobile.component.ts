@@ -13,6 +13,10 @@ export class HeaderMobileComponent {
   @Input() showLogo: boolean = true;
   @Output() activatedBurgerMenu = new EventEmitter<boolean>();
 
+
+  /**
+   * This method emits the event for displaying the overlay menu by clicking on the burger menu.
+   */
   showOverlayMenu() {
     this.activatedBurgerMenu.emit(true);
   }

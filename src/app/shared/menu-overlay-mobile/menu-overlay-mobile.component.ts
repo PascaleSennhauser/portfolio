@@ -34,10 +34,19 @@ export class MenuOverlayMobileComponent {
     }
   }
 
+
+  /**
+   * This method emits the event for closing the overlay menu by clicking on the burger menu.
+   */
   closeOverlayMenu() {
     this.dontShowOverlay.emit(false);
   }
 
+
+  /**
+   * This method sets the language in the language service.
+   * @param language - The selected language 'de' or 'en'.
+   */
   setLanguage(language: string) {
     this.languageData.setLanguage(language);
   }

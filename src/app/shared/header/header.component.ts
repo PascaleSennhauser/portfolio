@@ -30,13 +30,28 @@ export class HeaderComponent {
     }
   }
 
+
+  /**
+   * This constructor creates an instance of the component.
+   * @param router - The Angular Router used for navigation.
+   */
   constructor(private router: Router) {
   }
 
+
+  /**
+   * This method sets the language in the language service.
+   * @param language - The selected language 'de' or 'en'.
+   */
   setLanguage(language: string) {
     this.languageData.setLanguage(language);
   }
 
+
+  /**
+   * This method navigates to the landing page with the current language.
+   * Constructs the URL by appending '/mainComponent' to the current language.
+   */
   goToLandingPage() {
     this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
   }
