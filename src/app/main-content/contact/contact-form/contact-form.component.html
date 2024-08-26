@@ -39,16 +39,26 @@
 
     <div class="privacy-policy-agreement">
         <label class="checkbox-container">
-            <input #privacyPolicy="ngModel" [(ngModel)]="checkbox" name="privacyPolicy" class="checkbox-button"
-                type="checkbox" required>
+            <input 
+            #privacyPolicy="ngModel" 
+            [(ngModel)]="privacyPolicyChecked" 
+            name="privacyPolicy" 
+            class="checkbox-button"
+            type="checkbox" 
+            required>
             <span class="customized-checkbox-button"></span>
         </label>
         <span class="agreement">I've read the <a class="agreement-link" (click)="goToImprint()">privacy policy</a> and
             agree to the processing of my data as outlined. </span>
     </div>
-    <!--   <span class="required-text">Please accept the privacy policy</span> -->
+    @if (privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)) {
+      <span class="required-text">Please accept the privacy policy</span>
+    }
+
 
     <div class="button-container">
-        <button type="submit" value="Submit">Say hello :)</button>
+        <button type="submit" value="Submit" [disabled]="contactForm.invalid" [ngClass]="contactForm.valid ? 'enabled-button' : 'disabled-button'">Say hello :)
+            <div class="disabled-button-container" (click)="markAllFormFieldsAsTouched(contactForm)" [ngStyle]="{ 'display': contactForm.valid ? 'none' : 'block' }"></div>
+        </button>
     </div>
 </form>

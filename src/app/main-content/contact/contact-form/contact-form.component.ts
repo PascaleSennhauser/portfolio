@@ -22,8 +22,8 @@ export class ContactFormComponent {
     email: "",
     message: "",
   };
-  checkbox = false;
   mailTest = true;
+  privacyPolicyChecked = false;
 
 
   /**
@@ -40,6 +40,12 @@ export class ContactFormComponent {
    */
   goToImprint() {
     this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
+  }
+
+
+  markAllFormFieldsAsTouched(ngForm: NgForm) {
+    ngForm.control.markAllAsTouched();
+
   }
 
   post = {
@@ -68,7 +74,7 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      console.log(this.contactData, this.privacyPolicyChecked);
       ngForm.resetForm();
     }
   }
