@@ -2,11 +2,11 @@
     <img class="circle-1" src="assets/img/background/ellipse.svg">
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <img class="circle-3" src="assets/img/background/ellipse.svg">
-    <div class="global-main-container main-contact-container" id="contact">
+    <div class="global-main-container main-contact-container">
         <h2>{{ text[languageData.currentLanguage].title }}</h2>
         <div class="contact-container">
             <div class="description">
-                <h3>{{ text[languageData.currentLanguage].title }}</h3>
+                <h3>{{ text[languageData.currentLanguage].question }}</h3>
                 <p class="contact-description">{{ text[languageData.currentLanguage].contactDescription}}</p>
                 <p class="developer-description" [innerHTML]="text[languageData.currentLanguage].developerDescription">
                 </p>

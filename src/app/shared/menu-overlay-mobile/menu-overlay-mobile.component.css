@@ -58,6 +58,10 @@ nav {
   gap: 29px;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 nav span {
   height: 28px;
   font-family: Montserrat;

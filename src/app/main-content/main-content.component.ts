@@ -47,7 +47,18 @@ export class MainContentComponent {
    */
   ngOnInit(): void {
     this.getCurrentLanguage();
-    this.scrollWindowToTop();
+    if (this.getCurrentPath().includes('mainComponent')) {
+      this.scrollWindowToTop();
+    }
+  }
+
+
+  getCurrentPath() {
+    let currentPath = '';
+    this.router.events.subscribe(() => {
+      currentPath = this.router.url;
+    });
+    return currentPath;
   }
 
 

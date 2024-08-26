@@ -22,7 +22,7 @@ export class ContactFormComponent {
     email: "",
     message: "",
   };
-  mailTest = false;
+  mailTest = true;
   privacyPolicyChecked = false;
   text: any = {
     en: {
