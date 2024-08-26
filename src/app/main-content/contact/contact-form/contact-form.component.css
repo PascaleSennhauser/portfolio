@@ -1,3 +1,9 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 label {
   width: 100%;
   position: relative;
@@ -254,4 +260,36 @@ textarea:focus {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.message-sent-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-sent {
+  padding: 13px 24px 13px 24px;
+  font-family: Montserrat;
+  width: 300px;
+  height: 100px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  .message-sent {
+    font-size: 14px;
+  }
 }

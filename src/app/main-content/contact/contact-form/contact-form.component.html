@@ -1,63 +1,74 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <label>
-        <input #name="ngModel" [(ngModel)]="contactData.name" minlength="2" maxlength="50" name="name"
-            class="input-field" type="text" [placeholder]="text[languageData.currentLanguage].namePlaceholder" required>
-        @if (name.valid && name.touched) {
-        <img src="assets/img/icons/correct-input.png">
-        }
-        @if (!name.valid && name.touched) {
-        <img src="assets/img/icons/false-input.png">
-        <span class="required-text">{{ text[languageData.currentLanguage].nameRequired }}</span>
-        }
+<div class="wrapper">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <label>
+            <input #name="ngModel" [(ngModel)]="contactData.name" minlength="2" maxlength="50" name="name"
+                class="input-field" type="text" [placeholder]="text[languageData.currentLanguage].namePlaceholder"
+                required>
+            @if (name.valid && name.touched) {
+            <img src="assets/img/icons/correct-input.png">
+            }
+            @if (!name.valid && name.touched) {
+            <img src="assets/img/icons/false-input.png">
+            <span class="required-text">{{ text[languageData.currentLanguage].nameRequired }}</span>
+            }
 
-    </label>
-
-    <label>
-        <input #email="ngModel" [(ngModel)]="contactData.email" name="email" class="input-field" type="email"
-            [placeholder]="text[languageData.currentLanguage].emailPlaceholder"
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
-        @if (email.valid && email.touched) {
-        <img src="assets/img/icons/correct-input.png">
-        }
-        @if (!email.valid && email.touched) {
-        <img src="assets/img/icons/false-input.png">
-        <span class="required-text">{{ text[languageData.currentLanguage].emailRequired }}</span>
-        }
-    </label>
-
-    <label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="5" name="message"
-            [placeholder]="text[languageData.currentLanguage].messagePlaceholder" required></textarea>
-        @if (message.valid && message.touched) {
-        <img src="assets/img/icons/correct-input.png">
-        }
-        @if (!message.valid && message.touched) {
-        <img src="assets/img/icons/false-input.png">
-        <span class="required-text">{{ text[languageData.currentLanguage].messageRequired }}</span>
-        }
-    </label>
-
-
-    <div class="privacy-policy-agreement">
-        <label class="checkbox-container">
-            <input #privacyPolicy="ngModel" [(ngModel)]="privacyPolicyChecked" name="privacyPolicy"
-                class="checkbox-button" type="checkbox" required>
-            <span class="customized-checkbox-button"></span>
         </label>
-        <span class="agreement">{{ text[languageData.currentLanguage].textPrivacyPolicyFirstPart }}<a
-                class="agreement-link" (click)="goToImprint()">{{ text[languageData.currentLanguage].privacyPolicy }}</a> {{
-            text[languageData.currentLanguage].textPrivacyPolicySecondPart }}</span>
-    </div>
-    @if (privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)) {
-    <span class="required-text">{{ text[languageData.currentLanguage].privacyPolicyRequired }}</span>
-    }
+
+        <label>
+            <input #email="ngModel" [(ngModel)]="contactData.email" name="email" class="input-field" type="email"
+                [placeholder]="text[languageData.currentLanguage].emailPlaceholder"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+            @if (email.valid && email.touched) {
+            <img src="assets/img/icons/correct-input.png">
+            }
+            @if (!email.valid && email.touched) {
+            <img src="assets/img/icons/false-input.png">
+            <span class="required-text">{{ text[languageData.currentLanguage].emailRequired }}</span>
+            }
+        </label>
+
+        <label>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="5" name="message"
+                [placeholder]="text[languageData.currentLanguage].messagePlaceholder" required></textarea>
+            @if (message.valid && message.touched) {
+            <img src="assets/img/icons/correct-input.png">
+            }
+            @if (!message.valid && message.touched) {
+            <img src="assets/img/icons/false-input.png">
+            <span class="required-text">{{ text[languageData.currentLanguage].messageRequired }}</span>
+            }
+        </label>
 
 
-    <div class="button-container">
-        <button type="submit" value="Submit" [disabled]="contactForm.invalid"
-            [ngClass]="contactForm.valid ? 'enabled-button' : 'disabled-button'">{{ text[languageData.currentLanguage].button }}
-            <div class="disabled-button-container" (click)="markAllFormFieldsAsTouched(contactForm)"
-                [ngStyle]="{ 'display': contactForm.valid ? 'none' : 'block' }"></div>
-        </button>
+        <div class="privacy-policy-agreement">
+            <label class="checkbox-container">
+                <input #privacyPolicy="ngModel" [(ngModel)]="privacyPolicyChecked" name="privacyPolicy"
+                    class="checkbox-button" type="checkbox" required>
+                <span class="customized-checkbox-button"></span>
+            </label>
+            <span class="agreement">{{ text[languageData.currentLanguage].textPrivacyPolicyFirstPart }}<a
+                    class="agreement-link" (click)="goToImprint()">{{ text[languageData.currentLanguage].privacyPolicy
+                    }}</a> {{
+                text[languageData.currentLanguage].textPrivacyPolicySecondPart }}</span>
+        </div>
+        @if (privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)) {
+        <span class="required-text">{{ text[languageData.currentLanguage].privacyPolicyRequired }}</span>
+        }
+
+
+        <div class="button-container">
+            <button type="submit" value="Submit" [disabled]="contactForm.invalid"
+                [ngClass]="contactForm.valid ? 'enabled-button' : 'disabled-button'">{{
+                text[languageData.currentLanguage].button }}
+                <div class="disabled-button-container" (click)="markAllFormFieldsAsTouched(contactForm)"
+                    [ngStyle]="{ 'display': contactForm.valid ? 'none' : 'block' }"></div>
+            </button>
+        </div>
+
+    </form>
+    <div class="message-sent-wrapper" [ngStyle]="{'display': showValidation ? 'flex' : 'none'}">
+        <div class="message-sent">
+            Thank you for your message!
+        </div>
     </div>
-</form>
+</div>

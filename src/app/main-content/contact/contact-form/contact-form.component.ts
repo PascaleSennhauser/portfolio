@@ -62,6 +62,7 @@ export class ContactFormComponent {
       },
     },
   };
+  showValidation: boolean = false;
 
 
   /**
@@ -111,9 +112,25 @@ export class ContactFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
+      this.showThankYouText();
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.log(this.contactData, this.privacyPolicyChecked);
       ngForm.resetForm();
+      this.showThankYouText();
     }
   }
+
+
+  /**
+   * This method shows a thank you text, wehn a message is sent.
+   */
+  showThankYouText() {
+    console.log("It works");
+    this.showValidation = true;
+    setTimeout(() => {
+      this.showValidation = false;
+    }, 1500);
+  }
 }
+
+
