@@ -5,17 +5,29 @@
     <div class="global-main-container imprint-container">
         <app-header id="imprintHeader" [pageImprint]="true"></app-header>
         <h1>{{ text[languageData.currentLanguage].imprintTitle }}</h1>
+        <h3 class="instance-title"><b>{{ text[languageData.currentLanguage].instance }}</b></h3><br>
         <p>Pascale Sennhauser<br>
-        pascale.sennhauser&#64;hotmail.ch<br>
-        {{ text[languageData.currentLanguage].imprintCountry }}<br></p>
+            {{ text[languageData.currentLanguage].imprintCountry }}<br>
+            <strong>{{ text[languageData.currentLanguage].email }}: </strong>pascale.sennhauser&#64;hotmail.ch<br>
+        </p>
         <p>
+
         <h2>{{ text[languageData.currentLanguage].images }}</h2>
         <p>
-        Sass-logo:<a href="https://sass-lang.com/styleguide/brand/" target="_blank"> https://sass-lang.com/styleguide/brand/</a><br>
-        Figma-logo:<a href="https://www.figma.com/using-the-figma-brand/" target="_blank"> https://www.figma.com/using-the-figma-brand/</a>
+            <b>Sass-logo:</b><a href="https://sass-lang.com/styleguide/brand/" target="_blank">
+                https://sass-lang.com/styleguide/brand/</a><br>
+            <b>Figma-logo:</b><a href="https://www.figma.com/using-the-figma-brand/" target="_blank">
+                https://www.figma.com/using-the-figma-brand/</a><br>
+            <b>{{ text[languageData.currentLanguage].icons }}</b><a href="https://developerakademie.com/" target="_blank"> https://developerakademie.com/</a>
         </p>
+
+        <div class="disclaimer-container">
+            <h2>{{ text[languageData.currentLanguage].disclaimerTitle }}</h2>
+            <div [innerHTML]="text[languageData.currentLanguage].disclaimerText">
+            </div>
+            <strong>{{ text[languageData.currentLanguage].resource }}</strong>: <a style='color:inherit;text-decoration:none;'
+                href='https://brainbox.swiss/' target="_blank">BrainBox Solutions</a></div>
         <h1>{{ text[languageData.currentLanguage].privacyPolicyTitle }}</h1>
         <p></p>
     </div>
 </div>
-
