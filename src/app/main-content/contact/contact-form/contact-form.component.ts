@@ -22,7 +22,7 @@ export class ContactFormComponent {
     email: "",
     message: "",
   };
-  mailTest = true;
+  mailTest = false;
   privacyPolicyChecked = false;
   text: any = {
     en: {
@@ -114,7 +114,6 @@ export class ContactFormComponent {
         });
       this.showThankYouText();
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData, this.privacyPolicyChecked);
       ngForm.resetForm();
       this.showThankYouText();
     }
@@ -125,7 +124,6 @@ export class ContactFormComponent {
    * This method shows a thank you text, wehn a message is sent.
    */
   showThankYouText() {
-    console.log("It works");
     this.showValidation = true;
     setTimeout(() => {
       this.showValidation = false;
