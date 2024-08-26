@@ -53,7 +53,7 @@ export class ContactFormComponent {
     }
   }
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://pascale-sennhauser.ch/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
