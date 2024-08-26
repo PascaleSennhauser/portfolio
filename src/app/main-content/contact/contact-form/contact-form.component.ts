@@ -24,6 +24,44 @@ export class ContactFormComponent {
   };
   mailTest = true;
   privacyPolicyChecked = false;
+  text: any = {
+    en: {
+      namePlaceholder: "Your name",
+      nameRequired: "Your name is required",
+      emailPlaceholder: "Your email",
+      emailRequired: "Your email is required",
+      messagePlaceholder: "Your message",
+      messageRequired: "Your message is empty",
+      textPrivacyPolicyFirstPart: "I've read the ",
+      privacyPolicy: "privacy policy",
+      textPrivacyPolicySecondPart: " and agree to the processing of my data as outlined.",
+      privacyPolicyRequired: "Please accept the privacy policy",
+      button: "Say hello :)"
+    },
+    ge: {
+      namePlaceholder: "Dein Name",
+      nameRequired: "Ihr Name ist erforderlich",
+      emailPlaceholder: "Deine E-Mail-Adresse",
+      emailRequired: "Deine E-Mail-Adresse ist erforderlich",
+      messagePlaceholder: "Deine Nachricht",
+      messageRequired: "Deine Nachricht ist leer",
+      textPrivacyPolicyFirstPart: "Ich habe die ",
+      privacyPolicy: "Datenschutzerklärung",
+      textPrivacyPolicySecondPart: " gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+      privacyPolicyRequired: "Bitte akzeptiere die Datenschutzerklärung",
+      button: "Sag Hallo :)"
+    }
+  }
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
 
   /**
@@ -43,23 +81,23 @@ export class ContactFormComponent {
   }
 
 
+  /**
+   * This method marks all the input fields as touched, when the disabled submit button is selected.
+   * The reuqired texts are shwon.
+   * @param ngForm - The Angular form to mark all controls as touched.
+   */
   markAllFormFieldsAsTouched(ngForm: NgForm) {
     ngForm.control.markAllAsTouched();
-
   }
 
-  post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
 
 
+  /**
+   * This method submits the form.
+   * When it's not a mail test and the form is valid, the form date is send to the specified endpoint for processing via PHP.
+   * If it's a mailTest, the form data is being logged to the console instead of being sent.
+   * @param ngForm - The Angular form instance, that gets submitted.
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))

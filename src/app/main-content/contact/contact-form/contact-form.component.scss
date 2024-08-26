@@ -1,7 +1,7 @@
 @mixin input-field($height) {
     width: 100%;
     height: $height;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 50px 15px 25px;
     box-sizing: border-box;
     gap: 10px;
     border-radius: 10px;
@@ -76,6 +76,7 @@ form {
 
 
 textarea {
+    resize: none;
     @include input-field(202px);
 
     @media (max-width: 1000px) {
