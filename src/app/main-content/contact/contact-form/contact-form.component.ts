@@ -22,8 +22,8 @@ export class ContactFormComponent {
     email: "",
     message: "",
   };
-  mailTest = false;
-  privacyPolicyChecked = false;
+  mailTest: boolean = true;
+  privacyPolicyChecked: boolean = false;
   text: any = {
     en: {
       namePlaceholder: "Your name",
@@ -53,7 +53,7 @@ export class ContactFormComponent {
     }
   }
   post = {
-    endPoint: 'https://localhost/sendMail.php',
+    endPoint: 'https://pascale-sennhauser.ch/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -104,7 +104,6 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {

@@ -1,6 +1,6 @@
 <div class="wrapper">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <label>
+        <label for="name">
             <input #name="ngModel" [(ngModel)]="contactData.name" minlength="2" maxlength="50" name="name"
                 class="input-field" type="text" [placeholder]="text[languageData.currentLanguage].namePlaceholder"
                 required>
@@ -14,7 +14,7 @@
 
         </label>
 
-        <label>
+        <label for="email">
             <input #email="ngModel" [(ngModel)]="contactData.email" name="email" class="input-field" type="email"
                 [placeholder]="text[languageData.currentLanguage].emailPlaceholder"
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
@@ -27,7 +27,7 @@
             }
         </label>
 
-        <label>
+        <label for="message">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="5" name="message"
                 [placeholder]="text[languageData.currentLanguage].messagePlaceholder" required></textarea>
             @if (message.valid && message.touched) {
