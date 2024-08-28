@@ -92,3 +92,24 @@ h2 {
     line-height: 16.8px;
   }
 }
+
+.growth-mindset {
+  position: relative;
+}
+
+.hover-info-growth-mindset {
+  position: absolute;
+  margin-bottom: 110px;
+  margin-left: 150px;
+}
+
+@media (max-width: 1000px) {
+  .hover-info-growth-mindset {
+    margin-bottom: 80px;
+    margin-left: 110px;
+  }
+}
+
+.d-none {
+  display: none;
+}

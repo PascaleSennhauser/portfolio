@@ -80,3 +80,22 @@ h2 {
         }
     }
 }
+
+.growth-mindset {
+    position: relative;
+}
+
+.hover-info-growth-mindset {
+    position: absolute;
+    margin-bottom: 110px;
+    margin-left: 150px;
+
+    @media (max-width: 1000px) {
+        margin-bottom: 80px;
+        margin-left: 110px;
+    }
+}
+
+.d-none {
+    display: none;
+}

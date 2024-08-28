@@ -1,10 +1,12 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { CommonModule } from '@angular/common';
+import { WINDOW } from '../../services/window-token';
 
 @Component({
   selector: 'app-skill-set',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule ],
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
@@ -66,6 +68,7 @@ export class SkillSetComponent {
 
   ];
   languageData = inject(LanguageService);
+  private _window = inject(WINDOW);
 
   text: any = {
     en: {
@@ -75,4 +78,13 @@ export class SkillSetComponent {
       title: "Fähigkeiten"
     }
   }
+  showHoverInfo = false;
+  isBigScreen = this._window.innerWidth > 1000;
+  @HostListener('window:resize', ['$event'])
+
+  
+  onResize(event: Event) {
+    this.isBigScreen = this._window.innerWidth > 1000;
+  }
+
 }

@@ -2,11 +2,19 @@
     <div class="global-main-container skill-set-container">
         <h2>{{ text[languageData.currentLanguage].title }}</h2>
         <div class="skills-container">
-            @for (skill of skills; track skill) {
-            <div class="single-skill-container">
-                <img src="assets/img/icons/{{ skill.img }}">
-                <span>{{ skill.name }}</span>
-            </div>
+            @for (skill of skills; track skill;) {
+                @if (skill.name == "Growth Mindset") {
+                    <div class="single-skill-container growth-mindset" (mouseenter)="showHoverInfo = true" (mouseleave)="showHoverInfo = false">
+                        <img src="assets/img/icons/{{ skill.img }}">
+                        <span>{{ skill.name }}</span>
+                        <img [ngClass]="{'d-none': !showHoverInfo}" [ngStyle]="{ 'width': isBigScreen ? '169px' : '120px'}" class="hover-info-growth-mindset .width" src="assets/img/icons/hover-info-growth-mindset.png">
+                    </div>
+                } @else {
+                    <div class="single-skill-container">
+                        <img src="assets/img/icons/{{ skill.img }}">
+                        <span>{{ skill.name }}</span>
+                    </div>
+                }
             }
         </div>
     </div>
