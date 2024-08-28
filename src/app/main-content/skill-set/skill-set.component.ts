@@ -58,6 +58,10 @@ export class SkillSetComponent {
     {
       name: 'Figma',
       img: 'Figma.svg'
+    },
+    {
+      name: 'Growth Mindset',
+      img: 'Grow.png'
     }
 
   ];
