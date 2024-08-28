@@ -24,7 +24,7 @@ export class ContactFormComponent {
     email: "",
     message: "",
   };
-  mailTest: boolean = true;
+  mailTest: boolean = false;
   privacyPolicyChecked: boolean = false;
   text: any = {
     en: {
@@ -55,7 +55,7 @@ export class ContactFormComponent {
     }
   }
   post = {
-    endPoint: 'https://pascale-sennhauser.ch/sendMail.php',
+    endPoint: 'sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
