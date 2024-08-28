@@ -3,11 +3,12 @@ import { Project } from '../../../interfaces/project.interface';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../services/language.service';
 import { WINDOW } from '../../../services/window-token';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-single-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './single-project.component.html',
   styleUrl: './single-project.component.scss'
 })
