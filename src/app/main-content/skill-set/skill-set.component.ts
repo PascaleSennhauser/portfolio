@@ -6,7 +6,7 @@ import { WINDOW } from '../../services/window-token';
 @Component({
   selector: 'app-skill-set',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [CommonModule],
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
@@ -82,7 +82,11 @@ export class SkillSetComponent {
   isBigScreen = this._window.innerWidth > 1000;
   @HostListener('window:resize', ['$event'])
 
-  
+
+  /**
+   * This method is called, when the window gets resized.
+   * When the window is bigger than 1000px, it's a big screen and the width gets adapted from the image.
+   */
   onResize(event: Event) {
     this.isBigScreen = this._window.innerWidth > 1000;
   }
