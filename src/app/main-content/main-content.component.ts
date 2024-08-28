@@ -72,7 +72,7 @@ export class MainContentComponent {
 
   /**
    * Lifecycle hook that is called after Angular has fully initialized the component's view.
-   * This methdo subscribes to changes in the URL fragment and triggers the 'handleFragmentScroll' method,  when the fragment changes.
+   * This method subscribes to changes in the URL fragment and triggers the 'handleFragmentScroll' method,  when the fragment changes.
    */
   ngAfterViewInit(): void {
     this.route.fragment.subscribe(() => {
@@ -108,19 +108,6 @@ export class MainContentComponent {
     this.router.navigate([], {
       fragment: undefined,
       queryParamsHandling: 'preserve',
-    });
-  }
-
-
-  /**
-   * This method scrolls the window to the top by filtering the event-stream.
-   * When the navigation is finished, the window gets scrolled to the top.
-   */
-  scrollWindowToTop() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      this._window.scrollTo(0, 0);
     });
   }
 }

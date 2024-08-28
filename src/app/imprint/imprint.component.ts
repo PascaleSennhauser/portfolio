@@ -1,9 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { LanguageService } from '../services/language.service';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WINDOW } from '../services/window-token';
-import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-imprint',
@@ -15,7 +14,6 @@ import { filter } from 'rxjs';
 
 export class ImprintComponent {
   languageData = inject(LanguageService);
-  private _window = inject(WINDOW);
   text: any = {
     en: {
       imprintTitle: "Imprint",
@@ -62,7 +60,7 @@ export class ImprintComponent {
     this.getCurrentLanguage();
   }
 
-  
+
   /**
    * This method sets the current language through the added language parameter in the router path.
    */
@@ -71,18 +69,4 @@ export class ImprintComponent {
       this.languageData.currentLanguage = params['lang'];
     });
   }
-
-
-  /**
-   * This method scrolls the window to the top by filtering the event-stream.
-   * When the navigation is finished, the window gets scrolled to the top.
-   */
-  scrollWindowToTop() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      this._window.scrollTo(0, 0);
-    });
-  }
-
 }

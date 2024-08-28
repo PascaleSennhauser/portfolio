@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { WINDOW } from '../../../services/window-token';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,6 +17,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class ContactFormComponent {
   languageData = inject(LanguageService);
+  private _window = inject(WINDOW);
   http = inject(HttpClient);
   contactData = {
     name: "",
@@ -79,6 +81,7 @@ export class ContactFormComponent {
    */
   goToImprint() {
     this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
+    this._window.scrollTo(0, 0);
   }
 
 
