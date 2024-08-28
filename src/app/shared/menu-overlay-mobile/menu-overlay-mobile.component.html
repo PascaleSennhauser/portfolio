@@ -4,10 +4,10 @@
         <img class="close-icon" src="assets/img/icons/close-icon.png" (click)="closeOverlayMenu()">
     </div>
     <nav>
-        <a href=""><span>{{ text[languageData.currentLanguage].aboutMe }}</span></a>
-        <a href="#skillSet"><span>{{ text[languageData.currentLanguage].skillSet }}</span></a>
-        <a href="#myWork"><span>{{ text[languageData.currentLanguage].myWork }}</span></a>
-        <a href="#contact"><span>{{ text[languageData.currentLanguage].contact }}</span></a>
+        <a [routerLink]="[]" fragment="aboutMe"><span>{{ text[languageData.currentLanguage].aboutMe }}</span></a>
+        <a [routerLink]="[]" fragment="skillSet"><span>{{ text[languageData.currentLanguage].skillSet }}</span></a>
+        <a [routerLink]="[]" fragment="myWork"><span>{{ text[languageData.currentLanguage].myWork }}</span></a>
+        <a [routerLink]="[]" fragment="contact"><span>{{ text[languageData.currentLanguage].contact }}</span></a>
         <div class="language-container">
             <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{
                 text[languageData.currentLanguage].german }}</span>

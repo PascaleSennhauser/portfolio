@@ -8,7 +8,7 @@ import { filter } from 'rxjs';
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [ HeaderComponent ],
+  imports: [HeaderComponent],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
@@ -59,18 +59,17 @@ export class ImprintComponent {
    * Second the window gets scrolled to the top.
    */
   ngOnInit(): void {
-      this.getCurrentLanguage();
-      this.scrollWindowToTop();
+    this.getCurrentLanguage();
   }
 
-
+  
   /**
    * This method sets the current language through the added language parameter in the router path.
    */
   getCurrentLanguage() {
     this.route.params.subscribe((params) => {
       this.languageData.currentLanguage = params['lang'];
-      });
+    });
   }
 
 

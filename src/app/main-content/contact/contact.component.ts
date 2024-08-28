@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { LanguageService } from '../../services/language.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ContactFormComponent],
+  imports: [ContactFormComponent, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

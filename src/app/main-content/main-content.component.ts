@@ -7,10 +7,11 @@ import { ContactComponent } from './contact/contact.component';
 import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { LandingPageMobileComponent } from "./landing-page-mobile/landing-page-mobile.component";
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs';
-import { WINDOW } from '../services/window-token';
+import { Router } from '@angular/router';
 import { MobileOverlayComponent } from "../shared/mobile-overlay/mobile-overlay.component";
+import { filter } from 'rxjs';
+import { NavigationEnd } from '@angular/router';
+import { WINDOW } from '../services/window-token';
 
 @Component({
   selector: 'app-main-content',
@@ -47,18 +48,12 @@ export class MainContentComponent {
    */
   ngOnInit(): void {
     this.getCurrentLanguage();
-    if (this.getCurrentPath().includes('mainComponent')) {
-      this.scrollWindowToTop();
-    }
-  }
-
-
-  getCurrentPath() {
-    let currentPath = '';
-    this.router.events.subscribe(() => {
-      currentPath = this.router.url;
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.handleFragmentScroll();
+      }
     });
-    return currentPath;
+
   }
 
 
@@ -71,6 +66,48 @@ export class MainContentComponent {
       if (lang) {
         this.languageData.currentLanguage = params['lang'];
       }
+    });
+  }
+
+
+  /**
+   * Lifecycle hook that is called after Angular has fully initialized the component's view.
+   * This methdo subscribes to changes in the URL fragment and triggers the 'handleFragmentScroll' method,  when the fragment changes.
+   */
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe(() => {
+      this.handleFragmentScroll();
+    });
+  }
+
+
+  /**
+   * This method handles scrolling to the element specified by the URL fragment.
+   * If a fragment is present in the current route, this method waits briefly before scrolling smoothly to the corresponding element in the DOM.
+   * Once the scrolling is complete, the fragment is removed from the URL.
+   */
+  handleFragmentScroll(): void {
+    const fragment = this.route.snapshot.fragment;
+    if (fragment) {
+      setTimeout(() => {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          this.removeFragmentFromURL();
+        }
+      }, 0);
+    }
+  }
+
+
+  /**
+   * This method removes the fragment from the current URL, while preserving any existing query parameters.
+   * This method is typically called after navigating to a fragment to clean up the URL.
+   */
+  removeFragmentFromURL(): void {
+    this.router.navigate([], {
+      fragment: undefined,
+      queryParamsHandling: 'preserve',
     });
   }
 

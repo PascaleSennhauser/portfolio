@@ -22,7 +22,7 @@ export class ContactFormComponent {
     email: "",
     message: "",
   };
-  mailTest = true;
+  mailTest = false;
   privacyPolicyChecked = false;
   text: any = {
     en: {
@@ -53,7 +53,7 @@ export class ContactFormComponent {
     }
   }
   post = {
-    endPoint: 'https://pascale-sennhauser.ch/sendMail.php',
+    endPoint: 'https://localhost/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -110,9 +110,8 @@ export class ContactFormComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.showThankYouText(),
         });
-      this.showThankYouText();
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.showThankYouText();

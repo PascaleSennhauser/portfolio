@@ -2,11 +2,12 @@ import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { HeaderMobileComponent } from "../header-mobile/header-mobile.component";
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menu-overlay-mobile',
   standalone: true,
-  imports: [HeaderMobileComponent, CommonModule],
+  imports: [HeaderMobileComponent, CommonModule, RouterLink],
   templateUrl: './menu-overlay-mobile.component.html',
   styleUrl: './menu-overlay-mobile.component.scss'
 })

@@ -1,11 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

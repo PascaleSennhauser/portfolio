@@ -38,18 +38,16 @@ export class FooterComponent {
    */
   goToImprint() {
     this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
+    this._window.scrollTo(0, 0);
   }
 
-  
+
   /**
    * This method navigates to the landing page and scrolls to the top if not already there.
    * Constructs the URL by appending '/mainComponent' to the current langauge.
    */
   goToLandingPage() {
-    if (this.router.url.includes('mainComponent')) {
-      this._window.scrollTo(0, 0);
-    } else {
-      this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
-    }
+    this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
+    this._window.scrollTo(0, 0);
   }
 }
