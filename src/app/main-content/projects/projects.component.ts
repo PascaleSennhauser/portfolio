@@ -24,7 +24,7 @@ export class ProjectsComponent {
   projects: Array<Project> = [
     {
       name: 'Join',
-      folderPath: '../../join/index.html',
+      folderPath: '/join.pascale-sennhauser.ch/index.html',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
       description: {
         en: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions and assign users and categories.',
@@ -36,7 +36,7 @@ export class ProjectsComponent {
     },
     {
       name: 'El Pollo Loco',
-      folderPath: '../../EPL/index.html',
+      folderPath: '/epl.pascale-sennhauser.ch/index.html',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
       description: {
         en: 'Jump, run and throw game based on object-oriented approach. Help Pepe to get the magical Salsa Bottle back by fighting against chicken, chicks and the "Pollo Loco".',
@@ -48,7 +48,7 @@ export class ProjectsComponent {
     },
     {
       name: 'Pokédex',
-      folderPath: '../../Pokedex/index.html',
+      folderPath: '/pokedex.pascale-sennhauser.ch/index.html',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS', 'Api'],
       description: {
         en: 'Based on the PokéAPI library that provieds and catalogues pokémon information.',
@@ -60,7 +60,7 @@ export class ProjectsComponent {
     },
     {
       name: 'Portfolio',
-      folderPath: 'index.html',
+      folderPath: '/pascale-sennhauser.ch/index.html',
       usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
       description: {
         en: 'My portfolio page, to introduce myself and highlight my web programming skills. It\'s the page you\'re looking at right now.',

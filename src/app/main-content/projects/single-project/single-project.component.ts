@@ -26,7 +26,7 @@ export class SingleProjectComponent {
   private _window = inject(WINDOW);
   @Input() project: Project = {
     name: 'Join',
-    folderPath: '../../join/index.html',
+    folderPath: '/join.pascale-sennhauser.ch/index.html',
     usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
     description: {
       en: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
