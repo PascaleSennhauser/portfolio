@@ -1,10 +1,9 @@
-import { Component, Input, inject, HostListener } from '@angular/core';
+import { Component, Input, inject, HostListener, ElementRef } from '@angular/core';
 import { Project } from '../../../interfaces/project.interface';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../services/language.service';
 import { WINDOW } from '../../../services/window-token';
 import { RouterLink } from '@angular/router';
-import { ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -40,15 +39,25 @@ export class SingleProjectComponent {
   @Input() index: number = 0;
   isBigScreen = this._window.innerWidth > 1000;
   isLandingPageMobile = this._window.innerWidth <= 1025;
-
   isInSight: 'enter' | 'leave' = 'enter';
 
-  
+
+  /**
+   * This constructor creates an instance of the component.
+   * @param el - The reference to the native DOM elment of the component.
+   */
   constructor(private el: ElementRef) {
   }
 
 
   @HostListener('window:scroll', [])
+
+
+  /**
+   * This method handles the scroll event and checks if the element with the class 'title' is within the viewport.
+   * It updates the 'isInSight' property accordingly.
+   * Through that the animation is shown, when the element is in the viewport. 
+   */
   onWindowScroll() {
     const titleElement = this.el.nativeElement.querySelector('.img');
     if (titleElement) {
@@ -60,7 +69,6 @@ export class SingleProjectComponent {
       }
     }
   }
-
 
 
   @HostListener('window:resize', ['$event'])

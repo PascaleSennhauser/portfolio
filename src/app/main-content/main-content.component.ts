@@ -4,12 +4,10 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillSetComponent } from './skill-set/skill-set.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
-import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { LandingPageMobileComponent } from "./landing-page-mobile/landing-page-mobile.component";
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { MobileOverlayComponent } from "../shared/mobile-overlay/mobile-overlay.component";
-import { NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',

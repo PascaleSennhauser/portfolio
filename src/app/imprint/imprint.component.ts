@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { LanguageService } from '../services/language.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { WINDOW } from '../services/window-token';
 
 @Component({
   selector: 'app-imprint',

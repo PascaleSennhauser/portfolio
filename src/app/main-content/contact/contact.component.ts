@@ -1,9 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener, ElementRef } from '@angular/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { LanguageService } from '../../services/language.service';
 import { RouterLink } from '@angular/router';
-import { HostListener } from '@angular/core';
-import { ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -38,15 +36,26 @@ export class ContactComponent {
       developerDescription: "Brauchen Sie eine Frontend Entwicklerin?<b> Kontaktieren Sie mich!</b>"
     }
   }
-
   isInSight: 'enter' | 'leave' = 'enter';
 
   
+
+  /**
+   * This constructor creates an instance of the component.
+   * @param el - The reference to the native DOM elment of the component.
+   */
   constructor(private el: ElementRef) {
   }
 
 
   @HostListener('window:scroll', [])
+
+
+  /**
+   * This method handles the scroll event and checks if the element with the class 'title' is within the viewport.
+   * It updates the 'isInSight' property accordingly.
+   * Through that the animation is shown, when the element is in the viewport. 
+   */
   onWindowScroll() {
     const titleElement = this.el.nativeElement.querySelector('.title');
     if (titleElement) {

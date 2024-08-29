@@ -2,8 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { LanguageService } from '../../../services/language.service';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { WINDOW } from '../../../services/window-token';
 
@@ -131,5 +130,3 @@ export class ContactFormComponent {
     }, 1500);
   }
 }
-
-

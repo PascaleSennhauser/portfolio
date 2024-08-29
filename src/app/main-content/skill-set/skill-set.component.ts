@@ -1,9 +1,8 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, inject, HostListener, ElementRef } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { WINDOW } from '../../services/window-token';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-skill-set',
@@ -91,11 +90,22 @@ export class SkillSetComponent {
   isInSight: 'enter' | 'leave' = 'enter';
 
   
+  /**
+   * This constructor creates an instance of the component.
+   * @param el - The reference to the native DOM elment of the component.
+   */
   constructor(private el: ElementRef) {
   }
 
 
   @HostListener('window:scroll', [])
+
+
+  /**
+   * This method handles the scroll event and checks if the element with the class 'title' is within the viewport.
+   * It updates the 'isInSight' property accordingly.
+   * Through that the animation is shown, when the element is in the viewport. 
+   */
   onWindowScroll() {
     const titleElement = this.el.nativeElement.querySelector('.title');
     if (titleElement) {
