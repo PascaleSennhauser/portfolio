@@ -30,6 +30,7 @@ export class SingleProjectComponent {
   };
   @Input() index: number = 0;
   isBigScreen = this._window.innerWidth > 1000;
+  isLandingPageMobile = this._window.innerWidth <= 1025;
   @HostListener('window:resize', ['$event'])
 
 
@@ -39,6 +40,7 @@ export class SingleProjectComponent {
    */
   onResize(event: Event) {
     this.isBigScreen = this._window.innerWidth > 1000;
+    this.isLandingPageMobile = this._window.innerWidth <= 1025;
   }
 
 

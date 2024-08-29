@@ -43,6 +43,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
+}
+
+.p-p-c-animation {
     animation: fly-from-left 1.5s ease-in-out;
 }
 
@@ -54,6 +57,9 @@
     padding-top: 100px;
     box-sizing: border-box;
     color: #5988FF;
+}
+
+.r-c-animation {
     animation: fly-from-right 1s ease-in-out;
 }
 

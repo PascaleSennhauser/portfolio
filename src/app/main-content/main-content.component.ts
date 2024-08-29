@@ -9,9 +9,7 @@ import { LanguageService } from '../services/language.service';
 import { LandingPageMobileComponent } from "./landing-page-mobile/landing-page-mobile.component";
 import { Router } from '@angular/router';
 import { MobileOverlayComponent } from "../shared/mobile-overlay/mobile-overlay.component";
-import { filter } from 'rxjs';
 import { NavigationEnd } from '@angular/router';
-import { WINDOW } from '../services/window-token';
 
 @Component({
   selector: 'app-main-content',
@@ -29,7 +27,6 @@ import { WINDOW } from '../services/window-token';
 
 export class MainContentComponent {
   languageData = inject(LanguageService);
-  private _window = inject(WINDOW);
 
 
   /**

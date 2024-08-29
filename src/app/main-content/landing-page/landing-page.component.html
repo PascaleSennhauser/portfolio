@@ -1,10 +1,10 @@
 <div class="global-background-container background-container">
     <img class="circle" src="assets/img/background/ellipse.svg">
-    <div id="landingPage" class="global-main-container landing-page-container">
+    <div class="global-main-container landing-page-container">
         <app-header></app-header>
         <div class="profile-picture-container">
         </div>
-        <div class="right-container">
+        <div class="right-container r-c-animation">
             <div class="greeting">
                 <p>{{ text[languageData.currentLanguage].greeting }}</p>
                 <h1 [innerHTML]="text[languageData.currentLanguage].jobTitle"></h1>

@@ -1,6 +1,6 @@
 
 @if ( project.name == 'Portfolio') {
-    <a [routerLink]="[]" fragment="landingPage"><img src={{project.imgSrc}}></a>
+    <a [routerLink]="[]" fragment="{{ isLandingPageMobile ? 'landingPageMobile' : 'landingPage' }}"><img src={{project.imgSrc}}></a>
 } @else {
     <a href="{{ project.folderPath }}" target="_blank"><img src={{project.imgSrc}}></a>
 }
