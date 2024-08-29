@@ -4,13 +4,22 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../services/language.service';
 import { WINDOW } from '../../../services/window-token';
 import { RouterLink } from '@angular/router';
+import { ElementRef } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-single-project',
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './single-project.component.html',
-  styleUrl: './single-project.component.scss'
+  styleUrl: './single-project.component.scss',
+  animations: [
+    trigger('imgEnter', [
+      state('enter', style({ transform: 'scale(1)' })),
+      state('leave', style({ transform: 'scale(0)' })),
+      transition('leave => enter', [animate('500ms ease-in')])
+    ])
+  ]
 })
 
 export class SingleProjectComponent {
@@ -31,9 +40,30 @@ export class SingleProjectComponent {
   @Input() index: number = 0;
   isBigScreen = this._window.innerWidth > 1000;
   isLandingPageMobile = this._window.innerWidth <= 1025;
+
+  isInSight: 'enter' | 'leave' = 'enter';
+
+  
+  constructor(private el: ElementRef) {
+  }
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const titleElement = this.el.nativeElement.querySelector('.img');
+    if (titleElement) {
+      const rect = titleElement.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        this.isInSight = 'enter';
+      } else {
+        this.isInSight = 'leave';
+      }
+    }
+  }
+
+
+
   @HostListener('window:resize', ['$event'])
-
-
   /**
    * This method is called, when the window gets resized.
    * When the window is bigger than 1000px, it's a big screen and the project description gets adapted.

@@ -2,10 +2,10 @@
     <img class="circle" src="assets/img/background/ellipse.svg">
     <div class="global-main-container landing-page-container">
         <app-header></app-header>
-        <div class="profile-picture-container">
+        <div class="profile-picture-container zoom-in-animation">
         </div>
-        <div class="right-container r-c-animation">
-            <div class="greeting">
+        <div class="right-container">
+            <div class="greeting zoom-in-animation">
                 <p>{{ text[languageData.currentLanguage].greeting }}</p>
                 <h1 [innerHTML]="text[languageData.currentLanguage].jobTitle"></h1>
             </div>

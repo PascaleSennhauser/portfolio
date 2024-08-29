@@ -2,13 +2,23 @@ import { Component, inject } from '@angular/core';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { Project } from '../../interfaces/project.interface';
 import { LanguageService } from '../../services/language.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+import { HostListener } from '@angular/core';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [SingleProjectComponent],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
+  animations: [
+    trigger('titleEnter', [
+      state('enter', style({ transform: 'scale(1)' })),
+      state('leave', style({ transform: 'scale(0)' })),
+      transition('leave => enter', [animate('500ms ease-in')])
+    ])
+  ]
 })
 
 export class ProjectsComponent {
@@ -73,4 +83,24 @@ export class ProjectsComponent {
       description: "Entdecken Sie hier eine Auswahl meiner Arbeiten. Klicken Sie auf das Bild eines Projektes, um es live zu testen."
     }
   }
+  isInSight: 'enter' | 'leave' = 'enter';
+
+  
+  constructor(private el: ElementRef) {
+  }
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const titleElement = this.el.nativeElement.querySelector('.title');
+    if (titleElement) {
+      const rect = titleElement.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        this.isInSight = 'enter';
+      } else {
+        this.isInSight = 'leave';
+      }
+    }
+  }
+
 }

@@ -7,7 +7,7 @@
     <img class="circle-6" src="assets/img/background/ellipse.svg">
     <img class="circle-7" src="assets/img/background/ellipse.svg">
     <div class="global-main-container projects-circle-container">
-        <h2>{{ text[languageData.currentLanguage].title }}</h2>
+        <div class="title-container"><h2 [@titleEnter]="isInSight" class="title">{{ text[languageData.currentLanguage].title }}</h2></div>
         <p>{{ text[languageData.currentLanguage].description }}</p>
         <div class="projects-container">
             @for (singleProject of projects; let i = $index; track singleProject) {

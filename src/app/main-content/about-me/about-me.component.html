@@ -3,7 +3,7 @@
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <div class="global-main-container about-me-container">
         <div class="container-left">
-            <h2 class="title" [innerHTML]="text[languageData.currentLanguage].title">
+            <h2 [@titleEnter]="isInSight" class="title" [innerHTML]="text[languageData.currentLanguage].title">
             </h2>
             <div class="i-am-container">
                 <span>{{ text[languageData.currentLanguage].Iam }}</span>

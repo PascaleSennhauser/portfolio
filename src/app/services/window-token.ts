@@ -6,7 +6,7 @@ import { InjectionToken } from '@angular/core';
  * 
  * This token abstracts the 'window'  object for use in Angular components and services.
  * It includes a factory function to ensure compatibility with environments where 'window'
- * is not available, such as server-side rendering 8SSR) or tests.
+ * is not available, such as server-side rendering (SSR) or tests.
  */
 export const WINDOW = new InjectionToken<Window>('WindowToken', {
   factory: () => {
