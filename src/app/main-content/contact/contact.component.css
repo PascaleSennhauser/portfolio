@@ -47,6 +47,10 @@ h2 {
   margin-bottom: 60px;
 }
 
+.main-contact-container {
+  position: relative;
+}
+
 .contact-container {
   display: flex;
   margin-bottom: 40px;
