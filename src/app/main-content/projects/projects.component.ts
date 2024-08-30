@@ -24,7 +24,7 @@ export class ProjectsComponent {
   projects: Array<Project> = [
     {
       name: 'Join',
-      folderPath: '/join.pascale-sennhauser.ch/index.html',
+      folderPath: 'https://join.pascale-sennhauser.ch',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
       description: {
         en: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions and assign users and categories.',
@@ -36,7 +36,7 @@ export class ProjectsComponent {
     },
     {
       name: 'El Pollo Loco',
-      folderPath: '/epl.pascale-sennhauser.ch/index.html',
+      folderPath: 'https://epl.pascale-sennhauser.ch',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
       description: {
         en: 'Jump, run and throw game based on object-oriented approach. Help Pepe to get the magical Salsa Bottle back by fighting against chicken, chicks and the "Pollo Loco".',
@@ -48,7 +48,7 @@ export class ProjectsComponent {
     },
     {
       name: 'Pokédex',
-      folderPath: '/pokedex.pascale-sennhauser.ch/index.html',
+      folderPath: 'https://pokedex.pascale-sennhauser.ch',
       usedTechnologies: ['JavaScript', 'HTML', 'CSS', 'Api'],
       description: {
         en: 'Based on the PokéAPI library that provieds and catalogues pokémon information.',
