@@ -114,6 +114,7 @@ h3 {
     }
 
     &:hover {
+        cursor: pointer;
         filter: brightness(1.2);
     }
 }

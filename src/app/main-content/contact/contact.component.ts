@@ -67,4 +67,12 @@ export class ContactComponent {
       }
     }
   }
+
+
+  /**
+   * This method scrolls the window to the top, so you get to the landing page.
+   */
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

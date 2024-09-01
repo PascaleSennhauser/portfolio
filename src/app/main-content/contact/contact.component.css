@@ -123,5 +123,6 @@ h3 {
 }
 
 .go-up-button:hover {
+  cursor: pointer;
   filter: brightness(1.2);
 }
