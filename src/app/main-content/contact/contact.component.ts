@@ -26,7 +26,7 @@ export class ContactComponent {
       title: "Contact",
       question: "Got a problem to solve?",
       contactDescription: "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
-      developerDescription: "Need a Frontend developer?<b> Contact me!</b>"
+      developerDescription: "Need frontend developer?<b> Contact me!</b>"
 
     },
     ge: {

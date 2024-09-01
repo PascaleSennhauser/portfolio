@@ -12,13 +12,6 @@ header {
   box-sizing: border-box;
 }
 
-@media (max-width: 1000px) {
-  header {
-    padding-left: 17px;
-    padding-right: 17px;
-  }
-}
-
 .logo {
   font-family: 'Amaranth';
   font-size: 64px;
@@ -29,12 +22,6 @@ header {
 .logo:hover {
   cursor: pointer;
   filter: drop-shadow(2px 2px 4px white);
-}
-
-@media (max-width: 1000px) {
-  .logo:hover {
-    filter: unset;
-  }
 }
 
 .header-menu {

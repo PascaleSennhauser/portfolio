@@ -1,8 +1,8 @@
 
 @if ( project.name == 'Portfolio') {
-    <a [routerLink]="[]" fragment="{{ isLandingPageMobile ? 'landingPageMobile' : 'landingPage' }}"><img [@imgEnter]="isInSight" class="img" src={{project.imgSrc}}></a>
+    <a [routerLink]="[]" fragment="{{ isLandingPageMobile ? 'landingPageMobile' : 'landingPage' }}" [@imgEnter]="isInSight"><img class="img" src={{project.imgSrc}}></a>
 } @else {
-    <a href="{{ project.folderPath }}" target="_blank"><img  [@imgEnter]="isInSight" class="img" src={{project.imgSrc}}></a>
+    <a href="{{ project.folderPath }}" target="_blank" [@imgEnter]="isInSight"><img class="img" src={{project.imgSrc}}></a>
 }
 <div class="project-information-container" [ngStyle]="{'align-items': index % 2 == 0 ? 'start' : 'end'}">
     <h3>{{ project.name }}</h3>
