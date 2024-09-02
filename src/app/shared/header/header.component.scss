@@ -10,6 +10,11 @@ header {
     padding-left: 100px;
     padding-right: 100px;
     box-sizing: border-box;
+
+    @media (max-width: 1000px) {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
 }
 
 .logo {
