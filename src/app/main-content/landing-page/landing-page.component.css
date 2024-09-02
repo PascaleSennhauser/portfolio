@@ -47,6 +47,12 @@
   background-position-y: bottom;
 }
 
+@media (min-height: 940px) and (max-width: 1380px) {
+  .profile-picture-container {
+    background-size: contain;
+  }
+}
+
 .right-container {
   display: flex;
   flex-direction: column;

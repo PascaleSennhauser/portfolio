@@ -43,6 +43,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
+
+    @media (min-height: 940px) and (max-width: 1380px) {
+        background-size: contain;
+    }
 }
 
 .right-container {
