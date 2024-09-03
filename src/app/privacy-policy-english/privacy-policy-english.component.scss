@@ -1,0 +1,58 @@
+* {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media (max-width: 1000px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+h1 {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-family: Baloo;
+    font-size: 60px;
+    font-weight: 400;
+    color: #5988FF;
+
+    @media (max-width: 1000px) {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: Baloo;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 45px;
+    color: #5988FF;
+
+    @media (max-width: 1000px) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.seal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
