@@ -64,7 +64,7 @@ export class ProjectsComponent {
       usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
       description: {
         en: 'My portfolio page, to introduce myself and highlight my web programming skills. It\'s the page you\'re looking at right now.',
-        ge: 'Mein Portfolio, um mich vorzustellen und meine Fähigkeiten in der Webprogrammierung hervorzuheben. Das ist die Seite, die Sie sich gerad ansehen.',
+        ge: 'Mein Portfolio, um mich vorzustellen und meine Fähigkeiten in der Webprogrammierung hervorzuheben. Das ist die Seite, die Sie sich gerade ansehen.',
       },
       imgSrc: 'assets/img/projects/portfolio.png',
       linkGitHub: 'https://github.com/PascaleSennhauser/portfolio.git',
