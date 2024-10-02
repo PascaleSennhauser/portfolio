@@ -1,7 +1,8 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef, inject } from '@angular/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { RouterLink } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { WINDOW } from '../../services/window-token';
 
 @Component({
   selector: 'app-contact',
@@ -19,6 +20,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class ContactComponent {
+  private _window = inject(WINDOW);
   text: any = {
     en: {
       title: "Contact",
@@ -35,6 +37,7 @@ export class ContactComponent {
     }
   }
   isInSight: 'enter' | 'leave' = 'enter';
+  isLandingPageMobile = this._window.innerWidth <= 1025;
 
   
 
@@ -67,10 +70,12 @@ export class ContactComponent {
   }
 
 
+  @HostListener('window:resize', ['$event'])
   /**
-   * This method scrolls the window to the top, so you get to the landing page.
+   * This method is called, when the window gets resized.
+   * When the window is bigger than 1000px, it's a big screen and the project description gets adapted.
    */
-  scrollToTop() {
-    window.scrollTo(0, 0);
+  onResize(event: Event) {
+    this.isLandingPageMobile = this._window.innerWidth <= 1025;
   }
 }
