@@ -1,5 +1,4 @@
 import { Component, inject, HostListener, ElementRef } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { WINDOW } from '../../services/window-token';
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -75,7 +74,6 @@ export class SkillSetComponent {
     }
 
   ];
-  languageData = inject(LanguageService);
   private _window = inject(WINDOW);
   text: any = {
     en: {

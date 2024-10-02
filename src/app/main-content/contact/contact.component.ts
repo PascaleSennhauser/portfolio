@@ -1,6 +1,5 @@
-import { Component, inject, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { LanguageService } from '../../services/language.service';
 import { RouterLink } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
@@ -20,7 +19,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class ContactComponent {
-  languageData = inject(LanguageService);
   text: any = {
     en: {
       title: "Contact",

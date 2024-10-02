@@ -1,7 +1,6 @@
 import { Component, Input, inject, HostListener, ElementRef } from '@angular/core';
 import { Project } from '../../../interfaces/project.interface';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../../../services/language.service';
 import { WINDOW } from '../../../services/window-token';
 import { RouterLink } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -22,7 +21,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class SingleProjectComponent {
-  languageData = inject(LanguageService);
   private _window = inject(WINDOW);
   @Input() project: Project = {
     name: 'Join',
@@ -40,6 +38,11 @@ export class SingleProjectComponent {
   isBigScreen = this._window.innerWidth > 1000;
   isLandingPageMobile = this._window.innerWidth <= 1025;
   isInSight: 'enter' | 'leave' = 'enter';
+
+  /**
+   * Placeholder
+   */
+  languageData = 'en';
 
 
   /**
@@ -87,6 +90,6 @@ export class SingleProjectComponent {
    * @returns {string} The description of the project in the currently selected language.
    */
   getDescription(): string {
-    return this.project.description[this.languageData.currentLanguage as 'en' | 'ge'];
+    return this.project.description[this.languageData as 'en' | 'ge'];
   }
 }

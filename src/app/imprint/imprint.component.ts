@@ -1,7 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
-import { LanguageService } from '../services/language.service';
-import { ActivatedRoute, Router } from '@angular/router';
 import { PrivacyPolicyEnglishComponent } from "../privacy-policy-english/privacy-policy-english.component";
 import { PrivacyPolicyGermanComponent } from "../privacy-policy-german/privacy-policy-german.component";
 
@@ -14,7 +12,6 @@ import { PrivacyPolicyGermanComponent } from "../privacy-policy-german/privacy-p
 })
 
 export class ImprintComponent {
-  languageData = inject(LanguageService);
   text: any = {
     en: {
       imprintTitle: "Imprint",
@@ -44,32 +41,9 @@ export class ImprintComponent {
     }
   }
 
-
   /**
-   * Constructor for the component, which initializes the Activated route, as well as the Router.
-   * @param route - The currently activated route, used to access route parameters and data.
-   * @param router - The Angular Router, used for navigating between different routes.
+   * Placeholder
    */
-  constructor(private route: ActivatedRoute, private router: Router) {
-  }
 
-
-  /**
-   * Angular lifecycle hook that is called after the component has been initialized.
-   * First the current language gets saved.
-   * Second the window gets scrolled to the top.
-   */
-  ngOnInit(): void {
-    this.getCurrentLanguage();
-  }
-
-
-  /**
-   * This method sets the current language through the added language parameter in the router path.
-   */
-  getCurrentLanguage() {
-    this.route.params.subscribe((params) => {
-      this.languageData.currentLanguage = params['lang'];
-    });
-  }
+  languageData = 'en';
 }

@@ -1,7 +1,6 @@
-import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HeaderMobileComponent } from "../header-mobile/header-mobile.component";
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../../services/language.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -13,7 +12,6 @@ import { RouterLink } from '@angular/router';
 })
 
 export class MenuOverlayMobileComponent {
-  languageData = inject(LanguageService);
   @Input() showOverlay: boolean = false;
   @Output() dontShowOverlay = new EventEmitter<false>;
   text: any = {
@@ -35,6 +33,11 @@ export class MenuOverlayMobileComponent {
     }
   }
 
+  /**
+   * Placeholder
+   */
+  languageData = 'en';
+
 
   /**
    * This method emits the event for closing the overlay menu by clicking on the burger menu.
@@ -42,15 +45,4 @@ export class MenuOverlayMobileComponent {
   closeOverlayMenu() {
     this.dontShowOverlay.emit(false);
   }
-
-
-  /**
-   * This method sets the language in the language service.
-   * @param language - The selected language 'de' or 'en'.
-   */
-  setLanguage(language: string) {
-    this.languageData.setLanguage(language);
-  }
-
-
 }

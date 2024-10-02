@@ -1,18 +1,18 @@
 <header>
     <a (click)="goToLandingPage()" class="logo">&#60;ps&#62;</a>
     <div class="header-menu">
-        <a [class.d-none]="pageImprint" [routerLink]="[]" fragment="aboutMe">{{
-            text[languageData.currentLanguage].aboutMe }}</a>
-        <a [class.d-none]="pageImprint" [routerLink]="[]" fragment="skillSet">{{
-            text[languageData.currentLanguage].skillSet }}</a>
-        <a [class.d-none]="pageImprint" [routerLink]="[]" fragment="myWork">{{ text[languageData.currentLanguage].myWork
+        <a [class.d-none]="pageImprint" href="#aboutMe">{{
+            text.en.aboutMe }}</a>
+        <a [class.d-none]="pageImprint" href="#skillSet">{{
+            text.en.skillSet }}</a>
+        <a [class.d-none]="pageImprint" href="#myWork">{{ text.en.myWork
             }}</a>
         <div class="language-container">
-            <span class="de" [class.language-bold]="languageData.currentLanguage == 'ge'" (click)="setLanguage('ge')">{{
-                text[languageData.currentLanguage].german }}</span>
+            <span class="de" [class.language-bold]="languageData == 'ge'">{{
+                text.en.german }}</span>
             <span class="separator">|</span>
-            <span class="en" [class.language-bold]="languageData.currentLanguage == 'en'" (click)="setLanguage('en')">{{
-                text[languageData.currentLanguage].english }}</span>
+            <span class="en" [class.language-bold]="languageData == 'en'">{{
+                text.en.english }}</span>
         </div>
     </div>
 </header>

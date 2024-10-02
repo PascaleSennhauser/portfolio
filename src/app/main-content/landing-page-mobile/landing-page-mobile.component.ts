@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { Component } from '@angular/core';
 import { HeaderMobileComponent } from '../../shared/header-mobile/header-mobile.component';
 import { MenuOverlayMobileComponent } from "../../shared/menu-overlay-mobile/menu-overlay-mobile.component";
 
@@ -12,7 +11,6 @@ import { MenuOverlayMobileComponent } from "../../shared/menu-overlay-mobile/men
 })
 
 export class LandingPageMobileComponent {
-  languageData = inject(LanguageService);
   text: any = {
     en: {
       greeting: "Hello! I am Pascale",

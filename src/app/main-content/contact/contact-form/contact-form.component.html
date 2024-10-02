@@ -2,40 +2,40 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <label for="name">
             <input #name="ngModel" [(ngModel)]="contactData.name" minlength="2" maxlength="50" name="name"
-                class="input-field" type="text" [placeholder]="text[languageData.currentLanguage].namePlaceholder"
+                class="input-field" type="text" [placeholder]="text.en.namePlaceholder"
                 required>
             @if (name.valid && name.touched) {
             <img src="assets/img/icons/correct-input.png">
             }
             @if (!name.valid && name.touched) {
             <img src="assets/img/icons/false-input.png">
-            <span class="required-text">{{ text[languageData.currentLanguage].nameRequired }}</span>
+            <span class="required-text">{{ text.en.nameRequired }}</span>
             }
 
         </label>
 
         <label for="email">
             <input #email="ngModel" [(ngModel)]="contactData.email" name="email" class="input-field" type="email"
-                [placeholder]="text[languageData.currentLanguage].emailPlaceholder"
+                [placeholder]="text.en.emailPlaceholder"
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
             @if (email.valid && email.touched) {
             <img src="assets/img/icons/correct-input.png">
             }
             @if (!email.valid && email.touched) {
             <img src="assets/img/icons/false-input.png">
-            <span class="required-text">{{ text[languageData.currentLanguage].emailRequired }}</span>
+            <span class="required-text">{{ text.en.emailRequired }}</span>
             }
         </label>
 
         <label for="message">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="5" name="message"
-                [placeholder]="text[languageData.currentLanguage].messagePlaceholder" required></textarea>
+                [placeholder]="text.en.messagePlaceholder" required></textarea>
             @if (message.valid && message.touched) {
             <img src="assets/img/icons/correct-input.png">
             }
             @if (!message.valid && message.touched) {
             <img src="assets/img/icons/false-input.png">
-            <span class="required-text">{{ text[languageData.currentLanguage].messageRequired }}</span>
+            <span class="required-text">{{ text.en.messageRequired }}</span>
             }
         </label>
 
@@ -46,20 +46,20 @@
                     class="checkbox-button" type="checkbox" required>
                 <span class="customized-checkbox-button"></span>
             </label>
-            <span class="agreement">{{ text[languageData.currentLanguage].textPrivacyPolicyFirstPart }}<a
-                    class="agreement-link" (click)="goToImprint()">{{ text[languageData.currentLanguage].privacyPolicy
+            <span class="agreement">{{ text.en.textPrivacyPolicyFirstPart }}<a
+                    class="agreement-link" (click)="goToImprint()">{{ text.en.privacyPolicy
                     }}</a> {{
-                text[languageData.currentLanguage].textPrivacyPolicySecondPart }}</span>
+                text.en.textPrivacyPolicySecondPart }}</span>
         </div>
         @if (privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)) {
-        <span class="required-text">{{ text[languageData.currentLanguage].privacyPolicyRequired }}</span>
+        <span class="required-text">{{ text.en.privacyPolicyRequired }}</span>
         }
 
 
         <div class="button-container">
             <button type="submit" value="Submit" [disabled]="contactForm.invalid"
                 [ngClass]="contactForm.valid ? 'enabled-button' : 'disabled-button'">{{
-                text[languageData.currentLanguage].button }}
+                text.en.button }}
                 <div class="disabled-button-container" (click)="markAllFormFieldsAsTouched(contactForm)"
                     [ngStyle]="{ 'display': contactForm.valid ? 'none' : 'block' }"></div>
             </button>

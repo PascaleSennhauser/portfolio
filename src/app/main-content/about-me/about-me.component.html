@@ -3,10 +3,10 @@
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <div class="global-main-container about-me-container">
         <div class="container-left">
-            <h2 [@titleEnter]="isInSight" class="title" [innerHTML]="text[languageData.currentLanguage].title">
+            <h2 [@titleEnter]="isInSight" class="title" [innerHTML]="text.en.title">
             </h2>
             <div class="i-am-container">
-                <span>{{ text[languageData.currentLanguage].Iam }}</span>
+                <span>{{ text.en.Iam }}</span>
                 <div class="icon-container">
                     <div class="location-container">
                         <img class="location-icon" [src]="imgSrcLocation"
@@ -14,7 +14,7 @@
                             (mouseout)="imgSrcLocation = 'assets/img/icons/location-icon-1.png'">
                         <img src="assets/img/icons/location-icon-2.png" class="d-none">
                         <img src="assets/img/icons/location-icon-1.png" class="icon-mobile">
-                        <span [innerHTML]="text[languageData.currentLanguage].located"
+                        <span [innerHTML]="text.en.located"
                             [ngStyle]="{'font-size': '16px'}"></span>
                     </div>
                     <div class="remote-container">
@@ -23,19 +23,19 @@
                             (mouseout)="imgSrcRemote = 'assets/img/icons/remote-icon-1.png'">
                         <img src="assets/img/icons/remote-icon-2.png" class="d-none">
                         <img src="assets/img/icons/remote-icon-1.png" class="icon-mobile">
-                        <span [innerHTML]="text[languageData.currentLanguage].remote"
+                        <span [innerHTML]="text.en.remote"
                             [ngStyle]="{'font-size': '16px'}"></span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-right">
-            <p>{{ text[languageData.currentLanguage].aboutMe }}<br><br>
-                {{ text[languageData.currentLanguage].workTogether }}
+            <p>{{ text.en.aboutMe }}<br><br>
+                {{ text.en.workTogether }}
             </p>
             <div class="button-container-wrapper">
                 <div class="button-container">
-                    <a [routerLink]="[]" fragment="contact">{{ text[languageData.currentLanguage].button }}</a>
+                    <a [routerLink]="[]" fragment="contact">{{ text.en.button }}</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <div class="global-background-container background-container">
     <div class="global-main-container skill-set-container">
-        <h2 [@titleEnter]="isInSight" class="title">{{ text[languageData.currentLanguage].title }}</h2>
+        <h2 [@titleEnter]="isInSight" class="title">{{ text.en.title }}</h2>
         <div class="skills-container">
             @for (skill of skills; track skill;) {
                 @if (skill.name == "Growth Mindset") {

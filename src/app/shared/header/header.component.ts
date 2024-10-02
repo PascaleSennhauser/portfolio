@@ -1,5 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { Component, Input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -11,8 +10,6 @@ import { Router, RouterLink } from '@angular/router';
 })
 
 export class HeaderComponent {
-
-  languageData = inject(LanguageService);
   @Input() pageImprint = false;
   text: any = {
     en: {
@@ -31,6 +28,12 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Placholder
+   */
+  languageData = 'en';
+
+
 
   /**
    * This constructor creates an instance of the component.
@@ -41,19 +44,10 @@ export class HeaderComponent {
 
 
   /**
-   * This method sets the language in the language service.
-   * @param language - The selected language 'de' or 'en'.
-   */
-  setLanguage(language: string) {
-    this.languageData.setLanguage(language);
-  }
-
-
-  /**
    * This method navigates to the landing page with the current language.
    * Constructs the URL by appending '/mainComponent' to the current language.
    */
   goToLandingPage() {
-    this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
+    this.router.navigateByUrl('');
   }
 }

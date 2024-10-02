@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mobile-overlay',
@@ -10,7 +9,6 @@ import { LanguageService } from '../../services/language.service';
 })
 
 export class MobileOverlayComponent {
-  languageData = inject(LanguageService);
   text: any = {
     en: {
       text: "Please rotate your device"

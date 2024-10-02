@@ -1,5 +1,4 @@
-import { Component, inject, HostListener, ElementRef } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -22,7 +21,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class AboutMeComponent {
   imgSrcLocation: string = 'assets/img/icons/location-icon-1.png';
   imgSrcRemote: string = 'assets/img/icons/remote-icon-1.png';
-  languageData = inject(LanguageService);
   text: any = {
     en: {
       title: "Let's work<br>together",

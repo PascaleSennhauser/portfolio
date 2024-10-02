@@ -1,7 +1,6 @@
-import { Component, inject, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { Project } from '../../interfaces/project.interface';
-import { LanguageService } from '../../services/language.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -20,7 +19,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class ProjectsComponent {
-  languageData = inject(LanguageService);
   projects: Array<Project> = [
     {
       name: 'Join',

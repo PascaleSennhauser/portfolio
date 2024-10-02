@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
 import { WINDOW } from '../../services/window-token';
 
@@ -11,7 +10,6 @@ import { WINDOW } from '../../services/window-token';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  languageData = inject(LanguageService);
   private _window = inject(WINDOW);
 
   text: any = {
@@ -37,7 +35,7 @@ export class FooterComponent {
    * Constructs the URL by appending '/imprint' to the current language.
    */
   goToImprint() {
-    this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
+    this.router.navigateByUrl('/imprint');
     this._window.scrollTo(0, 0);
   }
 
@@ -47,7 +45,7 @@ export class FooterComponent {
    * Constructs the URL by appending '/mainComponent' to the current langauge.
    */
   goToLandingPage() {
-    this.router.navigateByUrl(this.languageData.currentLanguage + '/mainComponent');
+    this.router.navigateByUrl('/');
     this._window.scrollTo(0, 0);
   }
 }

@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
-import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -11,7 +10,6 @@ import { LanguageService } from '../../services/language.service';
 })
 
 export class LandingPageComponent {
-  languageData = inject(LanguageService);
   text: any = {
     en: {
       greeting: "Hello! I am Pascale",

@@ -3,12 +3,12 @@
     <img class="circle-2" src="assets/img/background/ellipse.svg">
     <img class="circle-3" src="assets/img/background/ellipse.svg">
     <div class="global-main-container main-contact-container">
-        <div class="title-container"><h2 [@titleEnter]="isInSight" class="title">{{ text[languageData.currentLanguage].title }}</h2></div>
+        <div class="title-container"><h2 [@titleEnter]="isInSight" class="title">{{ text.en.title }}</h2></div>
         <div class="contact-container">
             <div class="description">
-                <h3>{{ text[languageData.currentLanguage].question }}</h3>
-                <p class="contact-description">{{ text[languageData.currentLanguage].contactDescription}}</p>
-                <p class="developer-description" [innerHTML]="text[languageData.currentLanguage].developerDescription">
+                <h3>{{ text.en.question }}</h3>
+                <p class="contact-description">{{ text.en.contactDescription}}</p>
+                <p class="developer-description" [innerHTML]="text.en.developerDescription">
                 </p>
             </div>
             <app-contact-form></app-contact-form>

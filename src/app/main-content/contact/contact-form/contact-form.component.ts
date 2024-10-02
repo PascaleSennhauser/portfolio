@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { LanguageService } from '../../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -15,7 +14,6 @@ import { WINDOW } from '../../../services/window-token';
 })
 
 export class ContactFormComponent {
-  languageData = inject(LanguageService);
   private _window = inject(WINDOW);
   http = inject(HttpClient);
   contactData = {
@@ -79,7 +77,7 @@ export class ContactFormComponent {
    * The URL is constructed using the current language and appends '/imprint' to it.
    */
   goToImprint() {
-    this.router.navigateByUrl(this.languageData.currentLanguage + '/imprint');
+    this.router.navigateByUrl('/imprint');
     this._window.scrollTo(0, 0);
   }
 
