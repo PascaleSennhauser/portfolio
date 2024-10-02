@@ -1,12 +1,13 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef, inject } from '@angular/core';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { Project } from '../../interfaces/project.interface';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SingleProjectComponent],
+  imports: [SingleProjectComponent, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   animations: [
@@ -19,6 +20,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class ProjectsComponent {
+  translate: TranslateService = inject(TranslateService);
   projects: Array<Project> = [
     {
       name: 'Join',
@@ -29,8 +31,7 @@ export class ProjectsComponent {
         ge: 'Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.',
       },
       imgSrc: 'assets/img/projects/join.png',
-      linkGitHub: 'https://github.com/PascaleSennhauser/join.git',
-      linkLiveTest: ''
+      linkGitHub: 'https://github.com/PascaleSennhauser/join.git'
     },
     {
       name: 'El Pollo Loco',
@@ -41,8 +42,7 @@ export class ProjectsComponent {
         ge: 'Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, die magische Salsaflasche zurückzubekommen, indem du gegen Hühner, Küken und das "Pollo Loco" kämpfst.',
       },
       imgSrc: 'assets/img/projects/el-pollo-loco.png',
-      linkGitHub: 'https://github.com/PascaleSennhauser/El_Pollo_Loco.git',
-      linkLiveTest: ''
+      linkGitHub: 'https://github.com/PascaleSennhauser/El_Pollo_Loco.git'
     },
     {
       name: 'Pokédex',
@@ -53,8 +53,7 @@ export class ProjectsComponent {
         ge: 'Basiert auf der PokéAPI-Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.',
       },
       imgSrc: 'assets/img/projects/pokédex.png',
-      linkGitHub: 'https://github.com/PascaleSennhauser/Pokedex.git',
-      linkLiveTest: ''
+      linkGitHub: 'https://github.com/PascaleSennhauser/Pokedex.git'
     },
     {
       name: 'Portfolio',
@@ -65,20 +64,9 @@ export class ProjectsComponent {
         ge: 'Mein Portfolio, um mich vorzustellen und meine Fähigkeiten in der Webprogrammierung hervorzuheben. Das ist die Seite, die Sie sich gerade ansehen.',
       },
       imgSrc: 'assets/img/projects/portfolio.png',
-      linkGitHub: 'https://github.com/PascaleSennhauser/portfolio.git',
-      linkLiveTest: ''
+      linkGitHub: 'https://github.com/PascaleSennhauser/portfolio.git'
     }
   ];
-  text: any = {
-    en: {
-      title: "My work",
-      description: "Explore a selection of my work here. Click on the image of a project to test it live."
-    },
-    ge: {
-      title: "Projekte",
-      description: "Entdecken Sie hier eine Auswahl meiner Arbeiten. Klicken Sie auf das Bild eines Projektes, um es live zu testen."
-    }
-  }
   isInSight: 'enter' | 'leave' = 'enter';
 
   

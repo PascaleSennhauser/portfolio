@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { WINDOW } from '../../../services/window-token';
 import { RouterLink } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-single-project',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslateModule],
   templateUrl: './single-project.component.html',
   styleUrl: './single-project.component.scss',
   animations: [
@@ -21,28 +22,23 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class SingleProjectComponent {
+  translate: TranslateService = inject(TranslateService);
   private _window = inject(WINDOW);
   @Input() project: Project = {
     name: 'Join',
     folderPath: '/join.pascale-sennhauser.ch/index.html',
-    usedTechnologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+    usedTechnologies: ['JavaScript', 'HTML', 'CSS'],
     description: {
       en: 'Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      ge: 'De',
+      ge: 'Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.',
     },
     imgSrc: 'assets/img/projects/join.png',
-    linkGitHub: 'https://github.com/PascaleSennhauser/join.git',
-    linkLiveTest: ''
+    linkGitHub: 'https://github.com/PascaleSennhauser/join.git'
   };
   @Input() index: number = 0;
   isBigScreen = this._window.innerWidth > 1000;
   isLandingPageMobile = this._window.innerWidth <= 1025;
   isInSight: 'enter' | 'leave' = 'enter';
-
-  /**
-   * Placeholder
-   */
-  languageData = 'en';
 
 
   /**
@@ -82,14 +78,5 @@ export class SingleProjectComponent {
   onResize(event: Event) {
     this.isBigScreen = this._window.innerWidth > 1000;
     this.isLandingPageMobile = this._window.innerWidth <= 1025;
-  }
-
-
-  /**
-   * This method retrieves the project description based on the current language.
-   * @returns {string} The description of the project in the currently selected language.
-   */
-  getDescription(): string {
-    return this.project.description[this.languageData as 'en' | 'ge'];
   }
 }

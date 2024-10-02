@@ -4,16 +4,14 @@
         <img class="close-icon" src="assets/img/icons/close-icon.png" (click)="closeOverlayMenu()">
     </div>
     <nav>
-        <a href="#aboutMe" (click)="closeOverlayMenu()"><span>{{ text.en.aboutMe }}</span></a>
-        <a href="#skillSet" (click)="closeOverlayMenu()"><span>{{ text.en.skillSet }}</span></a>
-        <a href="#myWork" (click)="closeOverlayMenu()"><span>{{ text.en.myWork }}</span></a>
-        <a href="#contact" (click)="closeOverlayMenu()"><span>{{ text.en.contact }}</span></a>
+        <a href="#aboutMe" (click)="closeOverlayMenu()"><span>{{ 'header.aboutMe' | translate }}</span></a>
+        <a href="#skillSet" (click)="closeOverlayMenu()"><span>{{ 'header.skillSet' | translate }}</span></a>
+        <a href="#myWork" (click)="closeOverlayMenu()"><span>{{ 'header.myWork' | translate }}</span></a>
+        <a href="#contact" (click)="closeOverlayMenu()"><span>{{ 'header.contact' | translate }}</span></a>
         <div class="language-container">
-            <span class="de" [class.language-bold]="languageData == 'ge'">{{
-                text.en.german }}</span>
+            <span class="de" [class.language-bold]="currentLanguage == 'ge'" (click)="toggleLanguage('ge')">{{ 'header.german' | translate }}</span>
             <span class="separator">|</span>
-            <span class="en" [class.language-bold]="languageData == 'en'">{{
-                text.en.english }}</span>
+            <span class="en" [class.language-bold]="currentLanguage == 'en'" (click)="toggleLanguage('en')">{{ 'header.english' | translate }}</span>
         </div>
     </nav>
 </div>

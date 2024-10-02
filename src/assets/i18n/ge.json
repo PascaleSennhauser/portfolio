@@ -1,0 +1,59 @@
+{
+    "header": {
+        "aboutMe": "Über mich",
+        "skillSet": "Fähigkeiten",
+        "myWork": "Meine Projekte",
+        "contact": "Kontakt",
+        "german": "DE",
+        "english": "EN"
+    },
+    "landingPage": {
+        "greeting": "Hallo! Ich heisse Pascale",
+        "jobTitle": "FRONTEND<br>ENTWICKLERIN"
+    },
+    "aboutMe": {
+        "title": "Lassen Sie uns gemeinsam<br>arbeiten",
+        "iAm": "Ich bin",
+        "located": "wohnhaft in<br>Winterthur",
+        "remote": "offen für<br>Remote-Arbeit",
+        "aboutMe": "Meine Leidenschaft für die Programmierung ergibt sich aus der Freude am logischen Denken sowie ein ansprechendes Projekt zu verwirklichen. Zusammen mit meinem ausgeprägten Verständnis für Kundenbedürfnisse ermöglicht dies mir, passende und kreative Lösungen zu erstellen. Um auf dem Laufenden zu bleiben und meine Fähigkeiten kontinuierlich weiterzuentwickeln, investiere ich Zeit, um mich fortzubilden. Ausserdem macht es mir Spass, komplexe Probleme zu lösen und mit Kunden sowie im Team zusammenzuarbeiten.",
+        "workTogether": "Wenn Sie denken, dass ich gut zu Ihrem Unternehmen oder zu Ihren Projekten passe, kontaktieren Sie mich!",
+        "button": "Nachricht senden"
+    },
+    "skillSet": {
+        "title": "Fähigkeiten"
+    },
+    "projects": {
+        "title": "Projekte",
+        "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Klicken Sie auf das Bild eines Projektes, um es live zu testen.",
+        "projects-description": {
+              "0": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.",
+              "1": "Jump, run and throw game based on object-oriented approach. Help Pepe to get the magical Salsa Bottle back by fighting against chicken, chicks and the \"Pollo Loco\".",
+              "2": "Basiert auf der PokéAPI-Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+              "3": "Mein Portfolio, um mich vorzustellen und meine Fähigkeiten in der Webprogrammierung hervorzuheben. Das ist die Seite, die Sie sich gerade ansehen."
+        }
+    },
+    "contact": {
+        "title": "Kontakt",
+        "question": "Haben Sie ein Problem zu lösen?",
+        "contactDescription": "Kontaktieren Sie mich über dieses Formular. Ich freue mich von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+        "developerDescription": "Brauchen Sie eine Frontend Entwicklerin?<b> Kontaktieren Sie mich!</b>"
+    },
+    "contactForm": {
+        "namePlaceholder": "Dein Name",
+        "nameRequired": "Ihr Name ist erforderlich",
+        "emailPlaceholder": "Deine E-Mail-Adresse",
+        "emailRequired": "Deine E-Mail-Adresse ist erforderlich",
+        "messagePlaceholder": "Deine Nachricht",
+        "messageRequired": "Deine Nachricht ist leer",
+        "textPrivacyPolicyFirstPart": "Ich habe die ",
+        "privacyPolicy": "Datenschutzerklärung",
+        "textPrivacyPolicySecondPart": " gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+        "privacyPolicyRequired": "Bitte akzeptiere die Datenschutzerklärung",
+        "button": "Sag Hallo :)",
+        "thankYou": "Vielen Dank für Ihre Nachricht!"
+    },
+    "footer": {
+        "imprint": "Impressum"
+    }
+}

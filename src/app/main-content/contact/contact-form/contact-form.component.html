@@ -2,40 +2,39 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <label for="name">
             <input #name="ngModel" [(ngModel)]="contactData.name" minlength="2" maxlength="50" name="name"
-                class="input-field" type="text" [placeholder]="text.en.namePlaceholder"
-                required>
+                class="input-field" type="text" [placeholder]="'contactForm.namePlaceholder' | translate" required>
             @if (name.valid && name.touched) {
             <img src="assets/img/icons/correct-input.png">
             }
             @if (!name.valid && name.touched) {
             <img src="assets/img/icons/false-input.png">
-            <span class="required-text">{{ text.en.nameRequired }}</span>
+            <span class="required-text">{{ 'contactForm.nameRequired' | translate }}</span>
             }
 
         </label>
 
         <label for="email">
             <input #email="ngModel" [(ngModel)]="contactData.email" name="email" class="input-field" type="email"
-                [placeholder]="text.en.emailPlaceholder"
+                [placeholder]="'contactForm.emailPlaceholder' | translate"
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
             @if (email.valid && email.touched) {
             <img src="assets/img/icons/correct-input.png">
             }
             @if (!email.valid && email.touched) {
             <img src="assets/img/icons/false-input.png">
-            <span class="required-text">{{ text.en.emailRequired }}</span>
+            <span class="required-text">{{ 'contactForm.emailRequired' | translate }}</span>
             }
         </label>
 
         <label for="message">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="5" name="message"
-                [placeholder]="text.en.messagePlaceholder" required></textarea>
+                [placeholder]="'contactForm.messagePlaceholder' | translate" required></textarea>
             @if (message.valid && message.touched) {
             <img src="assets/img/icons/correct-input.png">
             }
             @if (!message.valid && message.touched) {
             <img src="assets/img/icons/false-input.png">
-            <span class="required-text">{{ text.en.messageRequired }}</span>
+            <span class="required-text">{{ 'contactForm.messageRequired' | translate }}</span>
             }
         </label>
 
@@ -46,20 +45,19 @@
                     class="checkbox-button" type="checkbox" required>
                 <span class="customized-checkbox-button"></span>
             </label>
-            <span class="agreement">{{ text.en.textPrivacyPolicyFirstPart }}<a
-                    class="agreement-link" (click)="goToImprint()">{{ text.en.privacyPolicy
-                    }}</a> {{
-                text.en.textPrivacyPolicySecondPart }}</span>
+            <span class="agreement">{{ 'contactForm.textPrivacyPolicyFirstPart' | translate }}<a class="agreement-link"
+                    (click)="goToImprint()">{{ 'contactForm.privacyPolicy' | translate }}</a>
+                {{'contactForm.textPrivacyPolicySecondPart' | translate }}</span>
         </div>
         @if (privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)) {
-        <span class="required-text">{{ text.en.privacyPolicyRequired }}</span>
+        <span class="required-text">{{'contactForm.privacyPolicyRequired' | translate }}</span>
         }
 
 
         <div class="button-container">
             <button type="submit" value="Submit" [disabled]="contactForm.invalid"
-                [ngClass]="contactForm.valid ? 'enabled-button' : 'disabled-button'">{{
-                text.en.button }}
+                [ngClass]="contactForm.valid ? 'enabled-button' : 'disabled-button'">{{'contactForm.button' | translate
+                }}
                 <div class="disabled-button-container" (click)="markAllFormFieldsAsTouched(contactForm)"
                     [ngStyle]="{ 'display': contactForm.valid ? 'none' : 'block' }"></div>
             </button>
@@ -68,7 +66,7 @@
     </form>
     <div class="message-sent-wrapper" [ngStyle]="{'display': showValidation ? 'flex' : 'none'}">
         <div class="message-sent">
-            Thank you for your message!
+            {{'contactForm.thankYou' | translate }}
         </div>
     </div>
 </div>

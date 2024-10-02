@@ -1,18 +1,13 @@
 <header>
     <a (click)="goToLandingPage()" class="logo">&#60;ps&#62;</a>
     <div class="header-menu">
-        <a [class.d-none]="pageImprint" href="#aboutMe">{{
-            text.en.aboutMe }}</a>
-        <a [class.d-none]="pageImprint" href="#skillSet">{{
-            text.en.skillSet }}</a>
-        <a [class.d-none]="pageImprint" href="#myWork">{{ text.en.myWork
-            }}</a>
+        <a [class.d-none]="pageImprint" href="#aboutMe">{{ 'header.aboutMe' | translate }}</a>
+        <a [class.d-none]="pageImprint" href="#skillSet">{{ 'header.skillSet' | translate }}</a>
+        <a [class.d-none]="pageImprint" href="#myWork">{{ 'header.myWork' | translate }}</a>
         <div class="language-container">
-            <span class="de" [class.language-bold]="languageData == 'ge'">{{
-                text.en.german }}</span>
+            <span class="de" [class.language-bold]="currentLanguage == 'ge'" (click)="toggleLanguage('ge')">{{ 'header.german' | translate }}</span>
             <span class="separator">|</span>
-            <span class="en" [class.language-bold]="languageData == 'en'">{{
-                text.en.english }}</span>
+            <span class="en" [class.language-bold]="currentLanguage == 'en'" (click)="toggleLanguage('en')">{{ 'header.english' | translate }}</span>
         </div>
     </div>
 </header>

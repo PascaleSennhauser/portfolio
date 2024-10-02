@@ -5,8 +5,8 @@
         <app-header-mobile (activatedBurgerMenu)="openOverlay($event)"
             [showLogo]="!openOverlayMenu"></app-header-mobile>
         <div class="greeting">
-            <p>{{ text.en.greeting }}</p>
-            <h1 [innerHTML]="text.en.jobTitle"></h1>
+            <p>{{ 'landingPage.greeting' | translate }}</p>
+            <h1 [innerHTML]="'landingPage.jobTitle' | translate"></h1>
         </div>
         <div class="profile-picture-container zoom-in-animation"></div>
         <div class="scroll-container">

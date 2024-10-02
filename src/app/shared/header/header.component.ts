@@ -1,37 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 
 export class HeaderComponent {
+  translate: TranslateService = inject(TranslateService);
   @Input() pageImprint = false;
-  text: any = {
-    en: {
-      aboutMe: "About me",
-      skillSet: "Skill set",
-      myWork: "My work",
-      german: "GE",
-      english: "EN"
-    },
-    ge: {
-      aboutMe: "Über mich",
-      skillSet: "Fähigkeiten",
-      myWork: "Meine Projekte",
-      german: "DE",
-      english: "EN"
-    }
-  }
-
-  /**
-   * Placholder
-   */
-  languageData = 'en';
+  currentLanguage ='en';
 
 
 
@@ -40,6 +22,12 @@ export class HeaderComponent {
    * @param router - The Angular Router used for navigation.
    */
   constructor(private router: Router) {
+  }
+
+
+  toggleLanguage(language: string) {
+    this.translate.use(language);
+    this.currentLanguage = language;
   }
 
 

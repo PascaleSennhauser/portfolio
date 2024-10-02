@@ -1,0 +1,59 @@
+{
+    "header": {
+        "aboutMe": "About me",
+        "skillSet": "Skill set",
+        "myWork": "My work",
+        "contact": "Contact",
+        "german": "GE",
+        "english": "EN"
+    },
+    "landingPage": {
+        "greeting": "Hello! I am Pascale",
+        "jobTitle": "FRONTEND<br>DEVELOPER"
+    },
+    "aboutMe": {
+        "title": "Let's work<br>together",
+        "iAm": "I am",
+        "located": "located in<br>Winterthur",
+        "remote": "open to work<br>remote",
+        "aboutMe": "My passion for programming stems from my love for logical thinking and the drive to create appealing projects. Together with my keen understanding of customer needs, this enables me to create suitable and creative solutions. I invest time in further training to stay up to date and continuously develop my skills. Additionally, I enjoy solving complex problems and working with clients and in a team.",
+        "workTogether": "If you think I'd be a good fit for your company or projects, contact me!",
+        "button": "Send a message"
+    },
+    "skillSet": {
+        "title": "Skill set"
+    },
+    "projects": {
+            "title": "My work",
+            "description": "Explore a selection of my work here. Click on the image of a project to test it live.",
+            "projectsDescription": {
+                  "0": "Task manager inspried by the Kanban System. Create and organize tasks using drag and drop functions and assign users and categories.",
+                  "1": "Jump, run and throw game based on object-oriented approach. Help Pepe to get the magical Salsa Bottle back by fighting against chicken, chicks and the \"Pollo Loco\".",
+                  "2": "Based on the PokéAPI library that provieds and catalogues pokémon information.",
+                  "3": "My portfolio page, to introduce myself and highlight my web programming skills. It's the page you're looking at right now."
+            }
+    },
+    "contact": {
+        "title": "Contact",
+        "question": "Got a problem to solve?",
+        "contactDescription": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "developerDescription": "Need frontend developer?<b> Contact me!</b>"
+    },
+    "contactForm": {
+        "namePlaceholder": "Your name",
+        "nameRequired": "Your name is required",
+        "emailPlaceholder": "Your email",
+        "emailRequired": "Your email is required",
+        "messagePlaceholder": "Your message",
+        "messageRequired": "Your message is empty",
+        "textPrivacyPolicyFirstPart": "I've read the ",
+        "privacyPolicy": "privacy policy",
+        "textPrivacyPolicySecondPart": " and agree to the processing of my data as outlined.",
+        "privacyPolicyRequired": "Please accept the privacy policy",
+        "button": "Say hello :)",
+        "thankYou": "Thank you for your message!"
+    },
+    "footer": {
+        "imprint": "Imprint"
+    }
+}

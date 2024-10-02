@@ -8,5 +8,4 @@ export interface Project {
       };
     imgSrc: string;
     linkGitHub: string;
-    linkLiveTest: string;
 }

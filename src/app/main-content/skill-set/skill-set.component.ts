@@ -2,11 +2,12 @@ import { Component, inject, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WINDOW } from '../../services/window-token';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skill-set',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss',
   animations: [
@@ -75,14 +76,7 @@ export class SkillSetComponent {
 
   ];
   private _window = inject(WINDOW);
-  text: any = {
-    en: {
-      title: "Skill set"
-    },
-    ge: {
-      title: "Fähigkeiten"
-    }
-  }
+  translate: TranslateService = inject(TranslateService);
   showHoverInfo = false;
   isBigScreen = this._window.innerWidth > 1000;
   isInSight: 'enter' | 'leave' = 'enter';

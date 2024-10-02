@@ -1,26 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderMobileComponent } from '../../shared/header-mobile/header-mobile.component';
 import { MenuOverlayMobileComponent } from "../../shared/menu-overlay-mobile/menu-overlay-mobile.component";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing-page-mobile',
   standalone: true,
-  imports: [HeaderMobileComponent, MenuOverlayMobileComponent],
+  imports: [HeaderMobileComponent, MenuOverlayMobileComponent, TranslateModule],
   templateUrl: './landing-page-mobile.component.html',
   styleUrl: './landing-page-mobile.component.scss'
 })
 
 export class LandingPageMobileComponent {
-  text: any = {
-    en: {
-      greeting: "Hello! I am Pascale",
-      jobTitle: "FRONTEND<br>DEVELOPER",
-    },
-    ge: {
-      greeting: "Hallo! Ich heisse Pascale",
-      jobTitle: "FRONTEND<br>ENTWICKLERIN",
-    }
-  }
+  translate: TranslateService = inject(TranslateService);
   openOverlayMenu: boolean = false;
 
 
