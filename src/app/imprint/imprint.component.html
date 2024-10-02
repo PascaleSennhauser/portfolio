@@ -4,38 +4,38 @@
     <img class="circle-3" src="assets/img/background/ellipse.svg">
     <div class="global-main-container imprint-container">
         <app-header id="imprintHeader" [pageImprint]="true"></app-header>
-        <h1>{{ text.en.imprintTitle }}</h1>
-        <h3 class="instance-title"><b>{{ text.en.instance }}</b></h3><br>
+        <h1>{{ 'imprint.imprintTitle' | translate }}</h1>
+        <h3 class="instance-title"><b>{{ 'imprint.instance' | translate }}</b></h3><br>
         <p>Pascale Sennhauser<br>
-            {{ text.en.imprintCountry }}<br>
-            <strong>{{ text.en.email }}: </strong><a href="mailto:pascale.sennhauser@hotmail.ch">pascale.sennhauser&#64;hotmail.ch</a><br>
+            {{ 'imprint.imprintCountry' | translate }}<br>
+            <strong>{{ 'imprint.email' | translate }}: </strong><a href="mailto:pascale.sennhauser@hotmail.ch">pascale.sennhauser&#64;hotmail.ch</a><br>
         </p>
         <p>
 
-        <h2>{{ text.en.images }}</h2>
+        <h2>{{ 'imprint.images' | translate }}</h2>
         <p>
-            <b>Sass-{{ text.en.logo }}:</b><a href="https://sass-lang.com/styleguide/brand/"
+            <b>Sass-{{ 'imprint.logo' | translate }}:</b><a href="https://sass-lang.com/styleguide/brand/"
                 target="_blank">
                 https://sass-lang.com/styleguide/brand/</a><br>
-            <b>Figma-{{ text.en.logo }}:</b><a
+            <b>Figma-{{ 'imprint.logo' | translate }}:</b><a
                 href="https://www.figma.com/using-the-figma-brand/" target="_blank">
                 https://www.figma.com/using-the-figma-brand/</a><br>
-            <b>Rotate-device-{{ text.en.icon }}:</b><a
+            <b>Rotate-device-{{ 'imprint.icon' | translate }}:</b><a
                 href="https://www.flaticon.com/free-icons/rotate" title="rotate icons" target="_blank">
                 https://www.flaticon.com/free-icons/rotate</a><br>
-            <b>{{ text.en.icons }}</b><a href="https://developerakademie.com/"
+            <b>{{ 'imprint.icons' | translate }}</b><a href="https://developerakademie.com/"
                 target="_blank"> https://developerakademie.com/</a>
         </p>
 
         <div class="disclaimer-container">
-            <h2>{{ text.en.disclaimerTitle }}</h2>
-            <div [innerHTML]="text.en.disclaimerText">
+            <h2>{{ 'imprint.disclaimerTitle' | translate }}</h2>
+            <div [innerHTML]="'imprint.disclaimerText' | translate">
             </div>
-            <strong>{{ text.en.resource }}</strong>: <a
+            <strong>{{ 'imprint.resource' | translate }}</strong>: <a
                 style='color:inherit;text-decoration:none;' href='https://brainbox.swiss/' target="_blank">BrainBox
                 Solutions</a>
         </div>
-        @if (languageData == 'en') {
+        @if (currentLanguage == 'en') {
             <app-privacy-policy-english></app-privacy-policy-english>
         } @else {
             <app-privacy-policy-german></app-privacy-policy-german>
