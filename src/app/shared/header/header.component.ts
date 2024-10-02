@@ -13,7 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
   translate: TranslateService = inject(TranslateService);
   @Input() pageImprint = false;
-  currentLanguage ='en';
+  currentLanguage ='';
 
 
 
@@ -22,6 +22,16 @@ export class HeaderComponent {
    * @param router - The Angular Router used for navigation.
    */
   constructor(private router: Router) {
+
+  }
+
+
+  ngOnInit() {
+    if(this.translate.currentLang) {
+      this.currentLanguage = this.translate.currentLang;
+    } else {
+      this.currentLanguage = this.translate.defaultLang;
+    }
   }
 
 

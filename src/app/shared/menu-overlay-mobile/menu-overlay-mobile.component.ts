@@ -16,7 +16,16 @@ export class MenuOverlayMobileComponent {
   translate: TranslateService = inject(TranslateService);
   @Input() showOverlay: boolean = false;
   @Output() dontShowOverlay = new EventEmitter<false>;
-  currentLanguage = 'en';
+  currentLanguage = '';
+
+
+  ngOnInit() {
+    if(this.translate.currentLang) {
+      this.currentLanguage = this.translate.currentLang;
+    } else {
+      this.currentLanguage = this.translate.defaultLang;
+    }
+  }
 
 
   toggleLanguage(language: string) {
