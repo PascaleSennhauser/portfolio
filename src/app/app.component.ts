@@ -8,7 +8,11 @@ import { MobileOverlayComponent } from "./shared/mobile-overlay/mobile-overlay.c
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, MobileOverlayComponent],
+  imports: [CommonModule,
+            RouterOutlet, 
+            HeaderComponent, 
+            FooterComponent, 
+            MobileOverlayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

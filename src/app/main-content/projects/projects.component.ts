@@ -69,7 +69,7 @@ export class ProjectsComponent {
   ];
   isInSight: 'enter' | 'leave' = 'enter';
 
-  
+
   /**
    * This constructor creates an instance of the component.
    * @param el - The reference to the native DOM elment of the component.

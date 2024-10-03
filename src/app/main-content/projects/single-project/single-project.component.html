@@ -1,8 +1,8 @@
-
 @if ( project.name == 'Portfolio') {
-    <a [href]="'#' + (isLandingPageMobile ? 'landingPageMobile' : 'landingPage')" [@imgEnter]="isInSight"><img class="img" src={{project.imgSrc}}></a>
+<a [href]="'#' + (isLandingPageMobile ? 'landingPageMobile' : 'landingPage')" [@imgEnter]="isInSight"><img class="img"
+        src={{project.imgSrc}}></a>
 } @else {
-    <a href="{{ project.folderPath }}" target="_blank" [@imgEnter]="isInSight"><img class="img" src={{project.imgSrc}}></a>
+<a href="{{ project.folderPath }}" target="_blank" [@imgEnter]="isInSight"><img class="img" src={{project.imgSrc}}></a>
 }
 <div class="project-information-container" [ngStyle]="{'align-items': index % 2 == 0 ? 'start' : 'end'}">
     <h3>{{ project.name }}</h3>
@@ -14,7 +14,8 @@
     }
     }
 </div>
-<p class="description" [ngStyle]="{'text-align': isBigScreen ? (index % 2 === 0 ? 'left' : 'right') : 'center'}">{{ 'projects.projectsDescription.' + index | translate }}</p>
+<p class="description" [ngStyle]="{'text-align': isBigScreen ? (index % 2 === 0 ? 'left' : 'right') : 'center'}">{{
+    'projects.projectsDescription.' + index | translate }}</p>
 <div class="button-container-wrapper">
     <div class="button-container">
         <a href={{project.linkGitHub}} target="_blank">Github</a>

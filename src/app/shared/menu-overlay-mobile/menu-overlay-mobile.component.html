@@ -9,9 +9,11 @@
         <a href="#myWork" (click)="closeOverlayMenu()"><span>{{ 'header.myWork' | translate }}</span></a>
         <a href="#contact" (click)="closeOverlayMenu()"><span>{{ 'header.contact' | translate }}</span></a>
         <div class="language-container">
-            <span class="de" [class.language-bold]="currentLanguage == 'ge'" (click)="toggleLanguage('ge')">{{ 'header.german' | translate }}</span>
+            <span class="de" [class.language-bold]="currentLanguage == 'ge'" (click)="toggleLanguage('ge')">{{
+                'header.german' | translate }}</span>
             <span class="separator">|</span>
-            <span class="en" [class.language-bold]="currentLanguage == 'en'" (click)="toggleLanguage('en')">{{ 'header.english' | translate }}</span>
+            <span class="en" [class.language-bold]="currentLanguage == 'en'" (click)="toggleLanguage('en')">{{
+                'header.english' | translate }}</span>
         </div>
     </nav>
 </div>

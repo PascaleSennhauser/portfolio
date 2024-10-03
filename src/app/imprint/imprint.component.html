@@ -8,7 +8,8 @@
         <h3 class="instance-title"><b>{{ 'imprint.instance' | translate }}</b></h3><br>
         <p>Pascale Sennhauser<br>
             {{ 'imprint.imprintCountry' | translate }}<br>
-            <strong>{{ 'imprint.email' | translate }}: </strong><a href="mailto:pascale.sennhauser@hotmail.ch">pascale.sennhauser&#64;hotmail.ch</a><br>
+            <strong>{{ 'imprint.email' | translate }}: </strong><a
+                href="mailto:pascale.sennhauser@hotmail.ch">pascale.sennhauser&#64;hotmail.ch</a><br>
         </p>
         <p>
 
@@ -17,28 +18,28 @@
             <b>Sass-{{ 'imprint.logo' | translate }}:</b><a href="https://sass-lang.com/styleguide/brand/"
                 target="_blank">
                 https://sass-lang.com/styleguide/brand/</a><br>
-            <b>Figma-{{ 'imprint.logo' | translate }}:</b><a
-                href="https://www.figma.com/using-the-figma-brand/" target="_blank">
+            <b>Figma-{{ 'imprint.logo' | translate }}:</b><a href="https://www.figma.com/using-the-figma-brand/"
+                target="_blank">
                 https://www.figma.com/using-the-figma-brand/</a><br>
-            <b>Rotate-device-{{ 'imprint.icon' | translate }}:</b><a
-                href="https://www.flaticon.com/free-icons/rotate" title="rotate icons" target="_blank">
+            <b>Rotate-device-{{ 'imprint.icon' | translate }}:</b><a href="https://www.flaticon.com/free-icons/rotate"
+                title="rotate icons" target="_blank">
                 https://www.flaticon.com/free-icons/rotate</a><br>
-            <b>{{ 'imprint.icons' | translate }}</b><a href="https://developerakademie.com/"
-                target="_blank"> https://developerakademie.com/</a>
+            <b>{{ 'imprint.icons' | translate }}</b><a href="https://developerakademie.com/" target="_blank">
+                https://developerakademie.com/</a>
         </p>
 
         <div class="disclaimer-container">
             <h2>{{ 'imprint.disclaimerTitle' | translate }}</h2>
             <div [innerHTML]="'imprint.disclaimerText' | translate">
             </div>
-            <strong>{{ 'imprint.resource' | translate }}</strong>: <a
-                style='color:inherit;text-decoration:none;' href='https://brainbox.swiss/' target="_blank">BrainBox
+            <strong>{{ 'imprint.resource' | translate }}</strong>: <a style='color:inherit;text-decoration:none;'
+                href='https://brainbox.swiss/' target="_blank">BrainBox
                 Solutions</a>
         </div>
         @if (currentLanguage == 'en') {
-            <app-privacy-policy-english></app-privacy-policy-english>
+        <app-privacy-policy-english></app-privacy-policy-english>
         } @else {
-            <app-privacy-policy-german></app-privacy-policy-german>
+        <app-privacy-policy-german></app-privacy-policy-german>
         }
     </div>
 </div>

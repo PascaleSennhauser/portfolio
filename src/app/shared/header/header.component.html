@@ -5,9 +5,11 @@
         <a [class.d-none]="pageImprint" href="#skillSet">{{ 'header.skillSet' | translate }}</a>
         <a [class.d-none]="pageImprint" href="#myWork">{{ 'header.myWork' | translate }}</a>
         <div class="language-container">
-            <span class="de" [class.language-bold]="currentLanguage == 'ge'" (click)="toggleLanguage('ge')">{{ 'header.german' | translate }}</span>
+            <span class="de" [class.language-bold]="currentLanguage == 'ge'" (click)="toggleLanguage('ge')">{{
+                'header.german' | translate }}</span>
             <span class="separator">|</span>
-            <span class="en" [class.language-bold]="currentLanguage == 'en'" (click)="toggleLanguage('en')">{{ 'header.english' | translate }}</span>
+            <span class="en" [class.language-bold]="currentLanguage == 'en'" (click)="toggleLanguage('en')">{{
+                'header.english' | translate }}</span>
         </div>
     </div>
 </header>

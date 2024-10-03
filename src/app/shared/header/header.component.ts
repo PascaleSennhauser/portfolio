@@ -13,7 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
   translate: TranslateService = inject(TranslateService);
   @Input() pageImprint = false;
-  currentLanguage ='';
+  currentLanguage = '';
 
 
 
@@ -22,10 +22,12 @@ export class HeaderComponent {
    * @param router - The Angular Router used for navigation.
    */
   constructor(private router: Router) {
-
   }
 
 
+  /**
+   * This method sets the current language, so the selected language gets highlighted.
+   */
   ngOnInit() {
     if(this.translate.currentLang) {
       this.currentLanguage = this.translate.currentLang;
@@ -35,6 +37,10 @@ export class HeaderComponent {
   }
 
 
+  /**
+   * This method toggles the language.
+   * @param language - The language, in this case 'en' or 'ge'.
+   */
   toggleLanguage(language: string) {
     this.translate.use(language);
     this.currentLanguage = language;

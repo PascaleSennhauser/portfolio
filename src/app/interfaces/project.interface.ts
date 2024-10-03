@@ -7,5 +7,5 @@ export interface Project {
         ge: string;
       };
     imgSrc: string;
-    linkGitHub: string;
+    linkGitHub: string
 }
